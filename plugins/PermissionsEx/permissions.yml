@@ -134,4 +134,5 @@ groups:
     - worldguard.*
     - worldedit.*
     - multiverse.*
+    - lagg.*
 schema-version: 1

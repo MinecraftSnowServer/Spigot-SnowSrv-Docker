@@ -44,10 +44,10 @@ player-speed-limiter:
 # -- 'max-mobs' means how many bably/adult animals are allowed within the 'check-radius'
 # -- 'check-radius' is the radius of what clearlag will check for 'max-mobs'
 mob-breeding-limiter:
-  enabled: false
-  max-mobs: 6
-  check-radius: 15
-  
+  enabled: true
+  max-mobs: 30
+  check-radius: 7
+
 #Should clearlag purge logs under /logs when the server starts?
 # -- 'days-old' means how many days old can the log be to be deleted
 log-purger:
@@ -73,10 +73,10 @@ config-updater:
 # -- 'check-radius' is the radius clearlag will check for nearby entities
 # -- 'max-mobs' is how many entities may be in the radius before the spawning is blocked
 mobegg-limiter:
-  enabled: false
-  check-radius: 8
-  max-mobs: 5
- 
+  enabled: true
+  check-radius: 7
+  max-mobs: 40
+
 #Disable new chunk generation, or just put a cap on how many can load at once.
 #May cause many bugs with Spigot 1.8+, not recommended!
 # -- 'create-new-chunks' disables or enables chunk creation. false would disallow new chunks 
@@ -110,10 +110,10 @@ live-time:
 #This option disallows the placement of too many tnt-minecarts
 # -- 'radius' is the radius clearlag will check for TNT-Minecarts
 tnt-minecart:
-  enabled: false
-  max: 2
-  radius: 6
-  
+  enabled: true
+  max: 100
+  radius: 7
+
 #This option reduces global dispenser fire rate
 # -- 'time' is in milliseconds
 dispenser-reducer:
@@ -127,7 +127,7 @@ tnt-reducer:
 #This option reduces fire spread rate
 # -- 'time' is in milliseconds
 firespread-reducer:
-  enabled: false
+  enabled: true
   time: 2000
   
 #How many entities should one chunk be allowed to hold?
@@ -206,7 +206,7 @@ auto-removal:
   enabled: true
   broadcast-message: '&6[ClearLag] &aRemoved +RemoveAmount Entities!'
   broadcast-removal: true
-  autoremoval-interval: 460
+  autoremoval-interval: 1800
   world-filter:
   # - this_world <-This world will be ignored during removal!
   boat: true
@@ -227,10 +227,12 @@ auto-removal:
   remove-mobs:
   # - cow <- This mob-type will be REMOVED during removal!
   warnings:
-        - 'time:400 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
-        - 'time:440 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
- 
-#What should be removed during /lagg clear 
+        - 'time:1000 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
+        - 'time:1500 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
+        - 'time:1700 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
+        - 'time:1740 msg:&4[ClearLag] &cWarning Ground items will be removed in &7+remaining &cseconds!'
+
+#What should be removed during /lagg clear
 command-remove:
   world-filter:
   # - this_world <-This world will be ignored during removal!
