@@ -871,14 +871,6 @@ admincmd_server_:
     description: Displays the current NEWs
     command: news
     cmd_name: bal_news
-  extinguish:
-    node: admincmd.server.extinguish
-    default: op
-    description: |-
-      Extinguish the fire in the wanted range.
-       Max 50, Default 20. Alias: /ex
-    command: extinguish [range]
-    cmd_name: bal_extinguish
   reload:
     node: admincmd.server.reload
     default: op
@@ -918,14 +910,6 @@ admincmd_server_:
        OR AdminCmd if not set. The [Plugin name] is CASE SENSITIVE!
     command: aversion <Plugin>
     cmd_name: bal_version
-  list:
-    node: admincmd.server.list
-    default: op
-    description: |-
-      Lists the available abilities (God, fly etc.) if no
-       <mode> given, else lists the users having the given <mode>.
-    command: info <mode>
-    cmd_name: bal_list
   help:
     node: admincmd.server.help
     default: op
