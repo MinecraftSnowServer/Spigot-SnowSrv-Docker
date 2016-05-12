@@ -394,7 +394,7 @@ quitmessage: "%playername% quit"
 
 spammessage: "You may only chat once every %interval% seconds."
 # format for messages from web: %playername% substitutes sender ID (typically IP), %message% includes text
-webmsgformat: "<&color;2[WEB]&color;f %playername%> %message%"
+webmsgformat: "[&color;2WEB&color;f] <%playername%> %message%"
 
 # Control whether layer control is presented on the UI (default is true)
 showlayercontrol: true

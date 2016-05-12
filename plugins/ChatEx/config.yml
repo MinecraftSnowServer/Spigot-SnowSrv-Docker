@@ -16,7 +16,7 @@
 
 enable: true
 message-format: <%prefix%player%suffix&e&f> %message
-global-message-format: <%prefix%player%suffix@&7%world&f> %message
+global-message-format: <%prefix%player%suffix> %message
 ranged-mode: false
 chat-range: 100.0
 multi-prefixes: false
