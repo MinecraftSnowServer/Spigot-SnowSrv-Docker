@@ -6,12 +6,14 @@ plugins/AdminCmd/*.log
 plugins/AdminCmd/*.db
 plugins/ChatEx/logs/*.log
 plugins/dynmap/ids-by-ip.txt
-plugins/dynmap/world.pending
+plugins/dynmap/*.pending
 plugins/dynmap/web/tiles
 plugins/WorldGuard/
 plugins/Multiverse-Core/worlds.yml
+plugins/Multiverse-Core/scripts/*.bin
 plugins/Multiverse-NetherPortals/config.yml
 plugins/Multiverse-Portals/*.log
+plugins/Multiverse-Portals/*.log.*
 plugins/Multiverse-Portals/*.lck
 plugins/Multiverse-Portals/portals.yml
 
