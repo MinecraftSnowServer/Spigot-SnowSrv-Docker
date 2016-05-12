@@ -1,0 +1,39 @@
+minecraft:
+  image: itzg/minecraft-server:latest
+  container_name: minecraft-spigot
+  environment:
+    - EULA=TRUE
+    - TYPE=SPIGOT
+    - VERSION=1.8.8
+    - DIFFICULTY=hard
+    - OPS=fntsrswl
+    - MOTD=OOLab Server
+  links:
+    - mariadb:mariadb
+  ports:
+    - "25565:25565"
+    - "8123:8123"
+  volumes:
+    - ./server:/data
+  tty: true
+  stdin_open: true
+mariadb:
+  image: bitnami/mariadb
+  environment:
+    - MARIADB_USER=authme
+    - MARIADB_PASSWORD=au
+    - MARIADB_DATABASE=authme
+  ports:
+    - "13306:3306"
+  volumes:
+    - ./db:/bitnami/mariadb/data
+pwd_utility:
+  build: ./pwd
+  links:
+      - mariadb:mariadb
+  ports:
+    - "8000:80"
+  volumes:
+    - "./:/var/www/html/"
+  environment:
+    - WEBSITE_TITLE=麥塊帳號管理網站 - Minecraft PWD Utility
