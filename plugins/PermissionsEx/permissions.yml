@@ -43,6 +43,34 @@ groups:
     - headdrops.myhead
     - headdrops.headinfo
     - lift.*
+    - worldguard.region.wand
+    - worldguard.region.claim
+    - worldguard.region.list.own
+    - worldguard.region.info.own.*
+    - worldguard.region.addowner.own.*
+    - worldguard.region.removeowner.own.*
+    - worldguard.region.addmember.own.*
+    - worldguard.region.removemember.own.*
+    - worldguard.region.flag.regions.own.*
+    - worldguard.region.flag.flags.pvp
+    - worldguard.region.flag.flags.mob-spawning
+    - worldguard.region.flag.flags.creeper-explosion
+    - worldguard.region.flag.flags.other-explosion
+    - worldguard.region.flag.flags.enderman-grief
+    - worldguard.region.flag.flags.fire-spread
+    - worldguard.region.flag.flags.lava-fire
+    - worldguard.region.flag.flags.chest-access
+    - worldguard.region.flag.flags.water-flow
+    - worldguard.region.flag.flags.lava-flow
+    - worldguard.region.flag.flags.use
+    - worldguard.region.flag.flags.vehicle-place
+    - worldguard.region.flag.flags.vehicle-destroy
+    - worldguard.region.flag.flags.grass-growth
+    - worldguard.region.flag.flags.entry
+    - worldguard.region.flag.flags.farewell
+    - worldguard.region.flag.flags.deny-spawn
+    - worldguard.region.setparent.own.*
+    - worldguard.region.remove.own.*
   VIP:
     inheritance:
     - Builder
@@ -54,7 +82,32 @@ groups:
     - headdrops.other
     - headdrops.mobhead
     - headdrops.playerhead
-    - worldedit.*
+    - worldguard.region.*
+    - worldedit.chunkinfo
+    - worldedit.listchunks
+    - worldedit.clipboard.*
+    - worldedit.help
+    - worldedit.generation.*
+    - worldedit.history.*
+    - worldedit.selection.*
+    - worldedit.wand.*
+    - worldedit.analysis.*
+    - worldedit.tool.*
+    - worldedit.brush.*
+    - worldedit.drain
+    - worldedit.fixlava
+    - worldedit.fixwater
+    - worldedit.removeabove
+    - worldedit.removebelow
+    - worldedit.removenear
+    - worldedit.snow
+    - worldedit.thaw
+    - worldedit.green
+    - worldedit.extinguish
+    - worldedit.butcher
+    - worldedit.remove
+    - worldedit.fill
+    - worldedit.help
   MOD:
     inheritance:
     - Builder
@@ -66,4 +119,6 @@ groups:
     - admincmd.*
     - chatex.*
     - headdrops.*
+    - worldguard.*
+    - worldedit.*
 schema-version: 1
