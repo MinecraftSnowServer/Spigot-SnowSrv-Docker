@@ -71,6 +71,18 @@ groups:
     - worldguard.region.flag.flags.deny-spawn
     - worldguard.region.setparent.own.*
     - worldguard.region.remove.own.*
+    - multiverse.access.*
+    - multiverse.core.info
+    - multiverse.core.spawn.self
+    - multiverse.help
+    - multiverse.portal.info
+    - multiverse.portal.list
+    - multiverse.portal.access.*
+    - multiverse.portals.use.*
+    - multiverse.signportal.create
+    - multiverse.signportal.validate
+    - multiverse.signportal.*
+    - multiverse.teleport.self.*
   VIP:
     inheritance:
     - Builder
@@ -121,4 +133,5 @@ groups:
     - headdrops.*
     - worldguard.*
     - worldedit.*
+    - multiverse.*
 schema-version: 1
