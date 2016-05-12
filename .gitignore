@@ -9,5 +9,11 @@ plugins/dynmap/ids-by-ip.txt
 plugins/dynmap/world.pending
 plugins/dynmap/web/tiles
 plugins/WorldGuard/
+plugins/Multiverse-Core/worlds.yml
+plugins/Multiverse-NetherPortals/config.yml
+plugins/Multiverse-Portals/*.log
+plugins/Multiverse-Portals/*.lck
+plugins/Multiverse-Portals/portals.yml
+
 
 server
