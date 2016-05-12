@@ -1,0 +1,13 @@
+﻿MOTD: |-
+  §6Welcome §f%player §6there is currently §4%nb players connected:
+  §6%connected
+  §2You've played so far: §b#elapsedTotalTime#
+  §2Your last login was: §b%lastlogin
+MOTDNewUser: |-
+  §6Welcome §f%player §6there is currently §4%nb players connected:
+  §6%connected
+NEWS: '§2News: AdminCmd Plugin has been installed'
+Rules: |-
+  1. Do not grief!
+  2. Do not use strong language!
+  3. Be friendly to other players!

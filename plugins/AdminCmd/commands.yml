@@ -1,0 +1,26 @@
+﻿#disabledCommands: 		 put here the AdminCmd command you want to disable. Any alias will work.
+#prioritizedCommands: 		 commands that you want AdminCmd to take over any other plugins.
+#aliases: 		 you can create new command alias for any AdminCmd command. You can also set some argument to it.
+#dontLogCommands: 		 these command won't be logged in the server.log when you use the chose to log the command in the configuration file.
+
+disabledCommands: []
+prioritizedCommands:
+- reload
+- /
+- stop
+- pl
+- plugins
+aliases:
+  god:
+    gg: ''
+    gd: ''
+  fly:
+    ofly: -o
+  egg:
+    grenade: -E ExplosionEgg
+onNewJoin:
+- /kit dirt
+- /motd
+dontLogCommands:
+- msg
+- reply

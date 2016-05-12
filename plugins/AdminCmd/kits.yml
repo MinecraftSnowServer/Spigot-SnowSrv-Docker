@@ -1,0 +1,28 @@
+﻿kits:
+  Tools:
+    delay: 30
+    items:
+      '268' :
+        amount : 1
+        echantments : []
+        durability : 0
+      '269' :
+        amount : 1
+        echantments : []
+        durability : 0
+      '270' :
+        amount : 1
+        echantments : []
+        durability : 0
+      '271' :
+        amount : 1
+        echantments : []
+        durability : 0
+      '290' :
+        amount : 1
+        echantments : []
+        durability : 0
+  dirt:
+    delay: 60
+    items:
+      'dirt': 64

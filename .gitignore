@@ -2,3 +2,7 @@ db
 plugins/AuthMe/*.log
 plugins/AuthMe/*.db
 plugins/AuthMe/GeoIP.dat
+plugins/AdminCmd/*.log
+plugins/AdminCmd/*.db
+
+server

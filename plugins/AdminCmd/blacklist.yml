@@ -1,0 +1,12 @@
+﻿
+
+
+
+
+
+BlackListedMaterial: !!set
+  ? ==: be.Balor.Tools.MaterialContainer
+    type: DIAMOND_SPADE
+    damage: 3
+  :
+BlackListedBlocks: []

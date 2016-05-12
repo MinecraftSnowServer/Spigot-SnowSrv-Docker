@@ -6,14 +6,46 @@ groups:
     options:
       default: true
     permissions:
-    - authme.player.*
     - modifyworld.*
+    - authme.player.*
+    - admincmd.kit.Tools
+    - admincmd.player.list
+    - admincmd.player.loc
+    - admincmd.player.kill
+    - admincmd.player.clear
+    - admincmd.player.msg
+    - admincmd.player.ip
+    - admincmd.player.ip.other
+    - admincmd.player.invisible
+    - admincmd.player.np
+    - admincmd.player.afk
+    - admincmd.player.roll
+    - admincmd.player.fly
+    - admincmd.player.played
+    - admincmd.player.whois
+    - admincmd.player.reply
+    - admincmd.player.pres
+    - admincmd.player.fly.allowed
+    - admincmd.tp.to
+    - admincmd.tp.*
+    - admincmd.tp.here
+    - admincmd.tp.location
+    - admincmd.tp.see
+    - admincmd.tp.back
+    - admincmd.tp.toggle.allow
+    - admincmd.tp.home
+    - admincmd.warp.tp
+    - admincmd.warp.tp.other
+    - admincmd.coloredsign.create
+    - admincmd.server.help
+    - admincmd.spawn.tp
   VIP:
     inheritance:
     - Builder
     options:
       prefix: '&6(VIP)&f '
-    permissions: {}
+    permissions:
+    - admincmd.item.*
   MOD:
     inheritance:
     - Builder
@@ -22,4 +54,5 @@ groups:
     - prefix: '&4(MOD)&f '
     permissions:
     - permissions.*
+    - admincmd.*
 schema-version: 1

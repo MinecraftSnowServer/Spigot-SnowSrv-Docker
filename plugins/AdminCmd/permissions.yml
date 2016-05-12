@@ -1,0 +1,1108 @@
+﻿admincmd_kit_:
+  '*':
+    type: Group Node
+    node: admincmd.kit.*
+    default: op
+  Tools:
+    node: admincmd.kit.Tools
+    default: op
+  dirt:
+    node: admincmd.kit.dirt
+    default: op
+admincmd_item_:
+  '*':
+    type: Group Node
+    node: admincmd.item.*
+    default: op
+  infinity:
+    node: admincmd.item.infinity
+    default: op
+  repair:
+    node: admincmd.item.repair
+    default: op
+    description: Repair if possible the item in hand.
+    command: repair
+    cmd_name: bal_repair
+    other:
+      node: admincmd.item.repair.other
+      default: op
+  repairall:
+    node: admincmd.item.repairall
+    default: op
+    description: |-
+      Repair all items in the inventory of
+       the <player>, defaults to yourself.
+    command: repairall <player_name>
+    cmd_name: bal_repairall
+    other:
+      node: admincmd.item.repairall.other
+      default: op
+  more:
+    node: admincmd.item.more
+    default: op
+    description: |-
+      Add <#> of the item in your hand to the item in
+       hand, else if no <#>, set the amount of this item to 64.
+    command: more <#>
+    cmd_name: bal_itemmore
+  add:
+    node: admincmd.item.add
+    default: op
+    description: To give a given amount <#> of an [item] to the <player> with the wanted <enchantments> (enchant:lvl).\n<-c color> is to color items like armors.\n Defaults to yourself.
+    command: item [name|alias|item id]:<damage> <#> <player> <enchantments> <-c color>
+    cmd_name: bal_item
+    other:
+      node: admincmd.item.add.other
+      default: op
+  blacklist:
+    node: admincmd.item.blacklist
+    default: op
+    description: Blacklist an [item|block]. -b for block and -i for item.
+    command: addblacklist <-flags> [name|alias|item id]
+    cmd_name: bal_addbl
+  color:
+    node: admincmd.item.color
+    default: op
+    description: |-
+      Changes the color of a
+       colorable item in hand. Type /color ? to list available colors.
+    command: color [color-name|color-id|?]
+    cmd_name: bal_itemcolor
+  alias:
+    node: admincmd.item.alias
+    default: op
+    description: Delete the alias.
+    command: rmalias [alias]
+    cmd_name: bal_rmalias
+  drop:
+    node: admincmd.item.drop
+    default: op
+    description: |-
+      Drops given
+       amount <#> of an [item] to the <player>. Defaults to yourself.
+    command: drop [name|alias|item id]:<damage> <#> <player>
+    cmd_name: bal_drop
+    other:
+      node: admincmd.item.drop.other
+      default: op
+  nodelay:
+    node: admincmd.item.nodelay
+    default: op
+  kithelp:
+    node: admincmd.item.kithelp
+    default: op
+  id:
+    node: admincmd.item.id
+    default: op
+    description: Get the id and the data of the item in hand. If player is defined, get the information from that player.
+    command: getid <-p player>
+    cmd_name: bal_itemid
+    other:
+      node: admincmd.item.id.other
+      default: op
+  enchant:
+    node: admincmd.item.enchant
+    default: op
+    description: Enchant the item in hand with the wanted [enchantements] with the form like <enchant:lvl>. If player is defined, set the enchantment for that player.
+    command: enchant <-p player> [enchantments]
+    cmd_name: bal_enchant
+    other:
+      node: admincmd.item.enchant.other
+      default: op
+  dynkit:
+    node: admincmd.item.dynkit
+    default: op
+    description: |-
+      Create a new kit using the inventory of the player with the [kitName] and the wanted <delay>.
+       If <-a> is used, it'll create an Armored Kit (taking also the armor of the player).
+    command: dk [kitName] <delay> <-a>
+    cmd_name: bal_dynkit
+    replace:
+      node: admincmd.item.dynkit.replace
+      default: op
+admincmd_player_:
+  '*':
+    type: Group Node
+    node: admincmd.player.*
+    default: op
+  bypass:
+    node: admincmd.player.bypass
+    default: op
+  noreset:
+    node: admincmd.player.noreset
+    default: op
+  noafkkick:
+    node: admincmd.player.noafkkick
+    default: op
+  fly:
+    allowed:
+      node: admincmd.player.fly.allowed
+      default: op
+    node: admincmd.player.fly
+    default: op
+    description: |-
+      You/the given <player> can now
+       fly when keep pressing the sneaking key (SHIFT). Press and
+       hold the sneaking key, Jump, your are flying. Power=Velocity, defaults to 1.75.
+    command: fly <power> <playername>
+    cmd_name: bal_fly
+    other:
+      node: admincmd.player.fly.other
+      default: op
+  list:
+    node: admincmd.player.list
+    default: op
+    description: Lists all online players.
+    command: playerlist
+    cmd_name: bal_playerlist
+  loc:
+    node: admincmd.player.loc
+    default: op
+    description: Display your or <player>s location.
+    command: loc <player>
+    cmd_name: bal_playerloc
+    other:
+      node: admincmd.player.loc.other
+      default: op
+  god:
+    node: admincmd.player.god
+    default: op
+    description: |-
+      Make you or a <player> like god, no more
+       damage. Type it again to disable god mode.
+    command: god <player>
+    cmd_name: bal_god
+    other:
+      node: admincmd.player.god.other
+      default: op
+  kill:
+    node: admincmd.player.kill
+    default: op
+    description: Kill yourself, or kill a special friend!
+    command: kill <playername>
+    cmd_name: bal_playerkill
+    other:
+      node: admincmd.player.kill.other
+      default: op
+  heal:
+    node: admincmd.player.heal
+    default: op
+    description: Heal yourself. Or, specify a <player>.
+    command: heal <player>
+    cmd_name: bal_playerheal
+    other:
+      node: admincmd.player.heal.other
+      default: op
+  clear:
+    node: admincmd.player.clear
+    default: op
+    description: |-
+      Clear the inventory of the
+       <player>, defaults to yourself. You can specify the
+       <material> to be removed.
+       And it's <amount>.
+    command: clear <-p playername> <material> <amount>
+    cmd_name: bal_pclear
+    other:
+      node: admincmd.player.clear.other
+      default: op
+  kick:
+    node: admincmd.player.kick
+    default: op
+    description: |-
+      Kick the given <player>, you can
+       personify the kick <message>.
+    command: kick [player] <message>
+    cmd_name: bal_kick
+  msg:
+    node: admincmd.player.msg
+    default: op
+    description: |-
+      Sends a private message to
+       another player.
+    command: msg [playername] [msg text]
+    cmd_name: bal_playermsg
+  kickall:
+    node: admincmd.player.kickall
+    default: op
+    description: |-
+      Kick the all connected player, you can
+       personify the kick <message>.
+    command: kickall <message>
+    cmd_name: bal_kickall
+  vulcan:
+    node: admincmd.player.vulcan
+    default: op
+    description: |-
+      Makes you or <player> like Vulcan,
+       explosion at see. Power=4.0xTNTPower by default.
+    command: vulcan <power> <player>
+    cmd_name: bal_vulcan
+    other:
+      node: admincmd.player.vulcan.other
+      default: op
+  invisible:
+    node: admincmd.player.invisible
+    default: op
+    description: Makes you/<player> invisible.
+    command: inv <player>
+    cmd_name: bal_invisible
+    other:
+      node: admincmd.player.invisible.other
+      default: op
+  spymsg:
+    node: admincmd.player.spymsg
+    default: op
+    description: You receive every private message.
+    command: spy
+    cmd_name: bal_spymsg
+  fireball:
+    node: admincmd.player.fireball
+    default: op
+    description: Makes you/<player> like a Ghast (you throw fireball that explode when touch something). Power= 1.0xGhast by default.
+    command: fireball <power> <player>
+    cmd_name: bal_fireball
+    other:
+      node: admincmd.player.fireball.other
+      default: op
+  ip:
+    node: admincmd.player.ip
+    default: op
+    description: Shows your IP/given <player> IP.
+    command: ip <player>
+    cmd_name: bal_ip
+    other:
+      node: admincmd.player.ip.other
+      default: op
+  ban:
+    node: admincmd.player.ban
+    default: op
+    description: |-
+      Ban the given <player> for
+       <time> minutes, you can personify the kick [message].
+    command: pban <player> <message> <time>
+    cmd_name: bal_ban
+  freeze:
+    node: admincmd.player.freeze
+    default: op
+    description: |-
+      Freeze the [player], he can't move,
+       can't interact with the world. He can only chat.
+    command: freeze [playername]
+    cmd_name: bal_freeze
+  mute:
+    '*':
+      node: admincmd.player.mute.*
+      default: op
+    node: admincmd.player.mute
+    default: op
+    description: |-
+      Mute the given <player> for <time>
+       minutes. He can't chat until you unmute him.
+    command: mute [playername] <time>
+    cmd_name: bal_mute
+  nopickup:
+    node: admincmd.player.nopickup
+    default: op
+    description: |-
+      The <player> will not pickup any item. Useful when invisible, or to punish an user. Tape it again to
+       disable it. Defaults to yourself if no player is given.
+    command: nopickup [playername]
+    cmd_name: bal_np
+    other:
+      node: admincmd.player.nopickup.other
+      default: op
+  roll:
+    node: admincmd.player.roll
+    default: op
+    description: 'Roll a [x]-sided dice. Default: 6'
+    command: roll <dice>
+    cmd_name: bal_roll
+  afk:
+    node: admincmd.player.afk
+    default: op
+    description: Set yourself AFK. You can give a [reason].
+    command: afk <reason>
+    cmd_name: bal_afk
+  superbreaker:
+    node: admincmd.player.superbreaker
+    default: op
+    description: |-
+      En-/Disables the 'Super-breaker' mode for
+       the <player>, defaults to yourself. Alias: //
+    command: break <player>
+    cmd_name: bal_sp
+    other:
+      node: admincmd.player.superbreaker.other
+      default: op
+  played:
+    node: admincmd.player.played
+    default: op
+    description: |-
+      How long the player or yourself if no name
+       provided has played on the server.
+    command: played <player>
+    cmd_name: bal_played
+    other:
+      node: admincmd.player.played.other
+      default: op
+  eternal:
+    node: admincmd.player.eternal
+    default: op
+    description: En-/Disables your or the provided [players'] Foodbar
+    command: eternal <player>
+    cmd_name: bal_eternal
+    other:
+      node: admincmd.player.eternal.other
+      default: op
+  fakequit:
+    node: admincmd.player.fakequit
+    default: op
+    description: |-
+      En-/Disables FakeQuit mode. If enabled a
+       quit message will be issued and you/the <player> will no longer
+       be listed online.
+    command: fakequit <player>
+    cmd_name: bal_fakequit
+    other:
+      node: admincmd.player.fakequit.other
+      default: op
+  feed:
+    node: admincmd.player.feed
+    default: op
+    description: Refills your or the provided [players'] Foodbar
+    command: feed <player>
+    cmd_name: bal_feed
+    other:
+      node: admincmd.player.feed.other
+      default: op
+  gamemode:
+    node: admincmd.player.gamemode
+    default: op
+    description: Switch the game mode for the selected player.
+    command: gm <player>
+    cmd_name: bal_gamemode
+    other:
+      node: admincmd.player.gamemode.other
+      default: op
+  whois:
+    node: admincmd.player.whois
+    default: op
+    description: |-
+      Get information about yourself or the <player>.
+       <-w world> to get information about the world.
+    command: whois <player | -w world)>
+    cmd_name: bal_whois
+    other:
+      node: admincmd.player.whois.other
+      default: op
+  reply:
+    node: admincmd.player.reply
+    default: op
+    description: |-
+      Send a private message to the
+       last player who sent you a private message.
+    command: reply [message]
+    cmd_name: bal_reply
+  pres:
+    node: admincmd.player.pres
+    default: op
+    description: Set the your presentation message or the one of other player (-p)
+    command: pres <-p player> ["presentation"]
+    cmd_name: bal_pres
+    other:
+      node: admincmd.player.pres.other
+      default: op
+  experience:
+    node: admincmd.player.experience
+    default: op
+    description: 'Modify the experience of a player or view it. -l: Change level.
+      -a: Add xp to the player(subtract wih neg numbers). -p: Sets progression of
+      current level (0.0-1.0). -d: Drops xp near a player. -t: Views current total
+      xp'
+    command: xp [flags] <player> <amount>
+    cmd_name: bal_exp
+    other:
+      node: admincmd.player.experience.other
+      default: op
+  nodrop:
+    node: admincmd.player.nodrop
+    default: op
+    description: disable the drop for the selected player (-p), for the selected time (-t). The 2 parameters are optional. When trying to drop, it's cancelled, when dying, you keep your items and experience.
+    command: nodrop <-p player> <-t time>
+    cmd_name: bal_nodrop
+    other:
+      node: admincmd.player.nodrop.other
+      default: op
+  potion:
+    node: admincmd.player.potion
+    default: op
+    description: Add the effect of the potion for the wanted duration with the wanted amplifier to the player
+    command: potion <-p player> potion duration amplifier
+    cmd_name: bal_potion
+    other:
+      node: admincmd.player.potion.other
+      default: op
+  quit:
+    node: admincmd.player.quit
+    default: op
+    description: Lets you quit the game with giving a reason. Reason can be omitted though.
+    command: quit <message>
+    cmd_name: bal_quit
+  banlist:
+    node: admincmd.player.banlist
+    default: op
+    description: Displays a alphabetical list of all players who are banned with the reason and the date the ban was executed.
+    command: banlist
+    cmd_name: bal_banlist
+  search:
+    node: admincmd.player.search
+    default: op
+    description: Search for player having the same ip as [-i ip] or the player [-p player]
+    command: search [-i ip | -p player]
+    cmd_name: bal_search
+  withdraw:
+    node: admincmd.player.withdraw
+    default: op
+    description: Removes all powers from a player.
+    command: withdraw <-p player>
+    cmd_name: bal_withdraw
+    other:
+      node: admincmd.player.withdraw.other
+      default: op
+  mutelist:
+    node: admincmd.player.mutelist
+    default: op
+    description: TO COMPLETE
+    command: MISSING
+    cmd_name: bal_mutelist
+  unmuteall:
+    node: admincmd.player.unmuteall
+    default: op
+    description: Unmute all muted players
+    command: unmuteall
+    cmd_name: bal_unmuteall
+  openinv:
+    node: admincmd.player.openinv
+    default: op
+    description: Open the inventory of the target player
+    command: openinv <player>
+    cmd_name: bal_openinv
+  asuser:
+    node: admincmd.player.asuser
+    default: op
+    description: Execute the wanted [command] as the wanted [player] with the wanted [arguments].
+    command: au [player] [command] [args]
+    cmd_name: bal_asuser
+  walk:
+    node: admincmd.player.walk
+    default: op
+    description: Change the [walkspeed] of the <player>. If <-g> is used, the command return the walkspeed of the <player>
+    command: walk [walkspeed] <-P player> <-g>
+    cmd_name: bal_walkspeed
+    other:
+      node: admincmd.player.walk.other
+      default: op
+  enderchest:
+    node: admincmd.player.enderchest
+    default: op
+    description: Open or edit yours or another players enderchest content.
+    command: enderchest [player]
+    cmd_name: bal_enderchest
+    other:
+      node: admincmd.player.enderchest.other
+      default: op
+  workbench:
+    node: admincmd.player.workbench
+    default: op
+    description: Open a workbench-GUI.
+    command: workbench
+    cmd_name: bal_workbench
+  head:
+    node: admincmd.player.head
+    default: op
+    description: Spawn a head of a Player.
+    command: head <Player>
+    cmd_name: bal_head
+  rse:
+    node: admincmd.player.rse
+    default: op
+    description: Removes a status-effect from you, or from another player.
+    command: rse [Effect] <-P player>
+    cmd_name: bal_rse
+    other:
+      node: admincmd.player.rse.other
+      default: op
+admincmd_mob_:
+  '*':
+    type: Group Node
+    node: admincmd.mob.*
+    default: op
+  spawn:
+    node: admincmd.mob.spawn
+    default: op
+    description: |-
+      Spawn the given <#> of
+       [mob] in the given <distance> from you. It is possible to spawn
+       mounted mobs with ':', e.g /mob Spider:Zombie
+    command: mob [mobname:mount] <#> <distance>
+    cmd_name: bal_mob
+    other:
+      node: admincmd.mob.spawn.other
+      default: op
+  kill:
+    node: admincmd.mob.kill
+    default: op
+    description: |-
+      Kill the wanted mob. Type: all || animals ||
+       monsters || mobname. The parameter <-w world> is to specify the world
+       and <-r range> the range of the command (both optional)
+    command: mobkill [Type] <-r range> <-w world>
+    cmd_name: bal_killmob
+  limit:
+    node: admincmd.mob.limit
+    default: op
+    description: |-
+      Set the mob spawn limit
+       (none: no limit) for the chosen [world].
+    command: moblimit [world] [limit(#)|none]
+    cmd_name: bal_moblimit
+  spawner:
+    node: admincmd.mob.spawner
+    default: op
+    description: Set/Get the values of the Mob Spawner you are looking at. -g for get, -m for setting the Creature Type, -d for setting the delay
+    command: changems <-flags> <CreaturType|Delay>
+    cmd_name: bal_changespawner
+admincmd_spawn_:
+  '*':
+    type: Group Node
+    node: admincmd.spawn.*
+    default: op
+  set:
+    node: admincmd.spawn.set
+    default: op
+    description: |-
+      Set the spawn location with the given
+       <radius> of the current world.
+    command: setspawn <radius>
+    cmd_name: bal_setspawn
+  tp:
+    world:
+      node: admincmd.spawn.tp.world
+      default: op
+    world_nether:
+      node: admincmd.spawn.tp.world_nether
+      default: op
+    world_the_end:
+      node: admincmd.spawn.tp.world_the_end
+      default: op
+    node: admincmd.spawn.tp
+    default: op
+    description: |-
+      Teleport yourself to the spawn location of the
+       current world.
+    command: spawn
+    cmd_name: bal_spawn
+admincmd_time_:
+  '*':
+    type: Group Node
+    node: admincmd.time.*
+    default: op
+  day:
+    node: admincmd.time.day
+    default: op
+    description: Short for /time day.
+    command: day
+    cmd_name: bal_timeday
+  pause:
+    node: admincmd.time.pause
+    default: op
+  set:
+    node: admincmd.time.set
+    default: op
+    description: |-
+      Set world time
+       to a given timestamp/alias.
+    command: time [day|night|dusk|dawn|<raw>|pause|unpause]
+    cmd_name: bal_timeset
+  ptime:
+    node: admincmd.time.ptime
+    default: op
+    description: |-
+      Set the [time] for the player <player> or for yourself if no player given.
+       [normal] is used to return to the time of the world.
+    command: pt [day|night|dusk|dawn|raw|normal] <player>
+    cmd_name: bal_ptime
+    other:
+      node: admincmd.time.ptime.other
+      default: op
+admincmd_tp_:
+  '*':
+    type: Group Node
+    node: admincmd.tp.*
+    default: op
+  world:
+    '*':
+      node: admincmd.tp.world.*
+      default: op
+  toggle:
+    '*':
+      node: admincmd.tp.toggle.*
+      default: op
+  here:
+    node: admincmd.tp.here
+    default: op
+    description: Teleport [player] to your current location.
+    command: tphere [player]
+    cmd_name: bal_tphere
+  to:
+    node: admincmd.tp.to
+    default: op
+    description: Teleports you to <player>.
+    command: tp <player>
+    cmd_name: bal_tpto
+  players:
+    node: admincmd.tp.players
+    default: op
+    description: |-
+      Teleport [player] to
+       [dest_player].
+    command: t2p [player] [dest_player]
+    cmd_name: bal_tp2p
+  location:
+    node: admincmd.tp.location
+    default: op
+    description: Teleport yourself to the coordinates x,y,z.
+    command: tploc [x] [y] [z]
+    cmd_name: bal_tpthere
+    other:
+      node: admincmd.tp.location.other
+      default: op
+  home:
+    node: admincmd.tp.home
+    default: op
+    description: Teleports you to your [home](if set). If no name defaults to worldname.\n If you have the permission you can teleport to the\n home of another <player>.
+    command: home <player>:[homeName]
+    cmd_name: bal_home
+  see:
+    node: admincmd.tp.see
+    default: op
+    description: En-/Disable the 'teleport at see' mode, left click and you are teleported where you are looking at.
+    command: tpsee
+    cmd_name: bal_tpsee
+  back:
+    node: admincmd.tp.back
+    default: op
+    description: |-
+      Return to the location you where at before you tele-
+       ported/warped
+    command: back
+    cmd_name: bal_back
+  all:
+    node: admincmd.tp.all
+    default: op
+    description: Teleports all players to one location. For more info see /help -d tpall
+    command: tpall <worldName> <-s|-w warpName|-l x y z|-p playerName>
+    cmd_name: bal_tpall
+  up:
+    node: admincmd.tp.up
+    default: op
+    description: Teleports up to the next free block.
+    command: up
+    cmd_name: bal_up
+  down:
+    node: admincmd.tp.down
+    default: op
+    description: Teleports down to the next free block.
+    command: down
+    cmd_name: bal_down
+admincmd_tp_world_:
+  '*':
+    type: Group Node
+    node: admincmd.tp.world.*
+    default: op
+  world:
+    world:
+      node: admincmd.tp.world.world
+      default: op
+    world_nether:
+      node: admincmd.tp.world.world_nether
+      default: op
+    world_the_end:
+      node: admincmd.tp.world.world_the_end
+      default: op
+    node: admincmd.tp.world
+    default: op
+    list:
+      node: admincmd.tp.world.list
+      default: op
+admincmd_tp_toggle_:
+  '*':
+    type: Group Node
+    node: admincmd.tp.toggle.*
+    default: op
+  toggle:
+    allow:
+      node: admincmd.tp.toggle.allow
+      default: op
+    use:
+      node: admincmd.tp.toggle.use
+      default: op
+admincmd_weather_:
+  '*':
+    type: Group Node
+    node: admincmd.weather.*
+    default: op
+  thor:
+    node: admincmd.player.thor
+    default: op
+    description: |-
+      You gain the power of thor, when you click a
+       block it's striked by the thunder.
+    command: thor <player>
+    cmd_name: bal_thor
+    other:
+      node: admincmd.player.thor.other
+      default: op
+  clear:
+    node: admincmd.weather.clear
+    default: op
+    description: Clear the weather.
+    command: wclear
+    cmd_name: bal_wclear
+  storm:
+    node: admincmd.weather.storm
+    default: op
+    description: |-
+      Make the weather stormy for [minutes]
+       duration. Defaults to 10 mins
+    command: storm <minutes>
+    cmd_name: bal_wstorm
+  strike:
+    node: admincmd.weather.strike
+    default: op
+    description: Strike yourself/<player> with a lighting bolt.
+    command: strike <player>
+    cmd_name: bal_wstrike
+    other:
+      node: admincmd.weather.strike.other
+      default: op
+  freeze:
+    node: admincmd.weather.freeze
+    default: op
+    description: |-
+      Freeze the weather, if executed by a player, only
+       the weather of the current world, if launched by the console,
+       of every world. Type it again to disable it.
+    command: wfreeze
+    cmd_name: bal_wfreeze
+  rain:
+    node: admincmd.weather.rain
+    default: op
+    description: |-
+      Set the weather to rain for [minutes].
+       Defaults to 10 mins
+    command: rain <minutes>
+    cmd_name: bal_wrain
+admincmd_warp_:
+  '*':
+    type: Group Node
+    node: admincmd.warp.*
+    default: op
+  create:
+    node: admincmd.warp.create
+    default: op
+    description: Create a warp point using your current position and the given [WarpPointName].
+    command: wp [WarpPointName]
+    cmd_name: bal_createwarp
+  tp:
+    node: admincmd.warp.tp
+    default: op
+    description: Teleport yourself or another <player> to the warp point.(NB! You need permission to teleport someone else.), or list all warps
+    command: twp <WarpPointName> <player>
+    cmd_name: bal_tpwarp
+    other:
+      node: admincmd.warp.tp.other
+      default: op
+    all:
+      node: admincmd.warp.tp.all
+      default: op
+admincmd_invisible_:
+  '*':
+    type: Group Node
+    node: admincmd.invisible.*
+    default: op
+  notatarget:
+    node: admincmd.invisible.notatarget
+    default: op
+  cansee:
+    node: admincmd.invisible.cansee
+    default: op
+admincmd_server_:
+  '*':
+    type: Group Node
+    node: admincmd.server.*
+    default: op
+  exec:
+    '*':
+      node: admincmd.server.exec.*
+      default: op
+    node: admincmd.server.exec
+    default: op
+    description: |-
+      Execute some
+       scripts and commands (batch or bash on Unix) using a simple
+       file. If not set, it lists all scripts you have access to.
+    command: exec [ScriptName|-reload all/ScriptName]
+    cmd_name: bal_exec
+  memory:
+    '*':
+      node: admincmd.server.memory.*
+      default: op
+  motd:
+    node: admincmd.server.motd
+    default: op
+    description: Displays the current MotD.
+    command: motd
+    cmd_name: bal_motd
+  news:
+    node: admincmd.server.news
+    default: op
+    description: Displays the current NEWs
+    command: news
+    cmd_name: bal_news
+  extinguish:
+    node: admincmd.server.extinguish
+    default: op
+    description: |-
+      Extinguish the fire in the wanted range.
+       Max 50, Default 20. Alias: /ex
+    command: extinguish [range]
+    cmd_name: bal_extinguish
+  reload:
+    node: admincmd.server.reload
+    default: op
+    description: |-
+      Reload the given [plugin] OR AdminCmd
+       if not set. Alias: /ar. The parameter is CASE SENSITIVE!
+    command: areload [PluginName]
+    cmd_name: bal_reload
+  replace:
+    node: admincmd.server.replace
+    default: op
+    description: |-
+      Replace the wanted [block] by air. De-
+       faults to <radius> 10, CAUTION: It's the radius of a sphere
+       not a circle
+    command: air [Block] <radius>
+    cmd_name: bal_replace
+  repeat:
+    node: admincmd.server.repeat
+    default: op
+    description: |-
+      Repeat the last command you issued with the same
+       parameters. Alias: /rp
+    command: repeat
+    cmd_name: bal_repeat
+  uptime:
+    node: admincmd.server.uptime
+    default: op
+    description: Shows the Server uptime since the last restart.
+    command: uptime
+    cmd_name: bal_uptime
+  version:
+    node: admincmd.server.version
+    default: op
+    description: |-
+      Display the version of the given [plugin]
+       OR AdminCmd if not set. The [Plugin name] is CASE SENSITIVE!
+    command: aversion <Plugin>
+    cmd_name: bal_version
+  list:
+    node: admincmd.server.list
+    default: op
+    description: |-
+      Lists the available abilities (God, fly etc.) if no
+       <mode> given, else lists the users having the given <mode>.
+    command: info <mode>
+    cmd_name: bal_list
+  help:
+    node: admincmd.server.help
+    default: op
+    description: |-
+      Displays page <#> of the AdminCmd help or page 1.
+       /help -d help for more details
+    command: help <page#> <-s command|-d command>
+    cmd_name: bal_help
+  lockdown:
+    node: admincmd.server.lockdown
+    default: op
+  lock:
+    node: admincmd.server.lock
+    default: op
+    description: |-
+      Lock the server, kick every connected user that doesn't have
+       the perm admincmd.server.lockdown and disallow them to connect to the
+       locked server.
+    command: lockdown
+    cmd_name: bal_lockdown
+  set:
+    '*':
+      node: admincmd.server.set.*
+      default: op
+  rules:
+    node: admincmd.server.rules
+    default: op
+    description: Displays the current Rules
+    command: rules
+    cmd_name: bal_rules
+  difficulty:
+    node: admincmd.server.difficulty
+    default: op
+    description: 'Sets (-s) or gets (-g) the Difficulty of a world. Difficulty-values:
+      0,1,2,3'
+    command: difficulty [-g|-s] (worldName) (Difficulty)
+    cmd_name: bal_difficulty
+  broadcast:
+    node: admincmd.server.broadcast
+    default: op
+    description: Sends a message to all players. Layout can be adjusted via locale.
+    command: broadcast [message]
+    cmd_name: bal_broadcast
+  stop:
+    node: admincmd.server.stop
+    default: op
+    description: Stop the server by kicking first every connected players. If the -t parameter is set, wait the time before stopping, else take the one configured in the configuration file.
+    command: stop <-t second>
+    cmd_name: bal_stop
+  reloadtxt:
+    node: admincmd.server.reloadtxt
+    default: op
+    description: Reload all the text locale file (News,Rules,Motd)
+    command: rtxt
+    cmd_name: bal_rtxt
+  removesp:
+    node: admincmd.server.removesp
+    default: op
+    description: |-
+      Remove the power of an user if he don't have the permission for it anymore.
+       Use <-n> to not check the permission and remove all superpowers.
+    command: rmsp <player> <-n>
+    cmd_name: bal_remsp
+    other:
+      node: admincmd.server.removesp.other
+      default: op
+  plugins:
+    node: admincmd.server.plugins
+    default: op
+    description: List all the plugin installed on the server.
+    command: pl
+    cmd_name: bal_plugins
+admincmd_server_exec_:
+  '*':
+    type: Group Node
+    node: admincmd.server.exec.*
+    default: op
+admincmd_admin_:
+  '*':
+    type: Group Node
+    node: admincmd.admin.*
+    default: op
+  home:
+    node: admincmd.admin.home
+    default: op
+admincmd_egg_:
+  '*':
+    type: Group Node
+    node: admincmd.egg.*
+    default: op
+admincmd_spec_:
+  '*':
+    type: Group Node
+    node: admincmd.spec.*
+    default: op
+  noblacklist:
+    node: admincmd.spec.noblacklist
+    default: op
+  notprequest:
+    node: admincmd.spec.notprequest
+    default: op
+  noloss:
+    node: admincmd.spec.noloss
+    default: op
+  signedit:
+    node: admincmd.spec.signedit
+    default: op
+  ipbroadcast:
+    node: admincmd.spec.ipbroadcast
+    default: op
+  versionbcast:
+    node: admincmd.spec.versionbcast
+    default: op
+admincmd_:
+  '*':
+    type: Group Node
+    node: admincmd.*
+    default: op
+  create:
+    node: admincmd.coloredsign.create
+    default: op
+admincmd_server_memory_:
+  '*':
+    type: Group Node
+    node: admincmd.server.memory.*
+    default: op
+  memory:
+    node: admincmd.server.memory
+    default: op
+    mob:
+      node: admincmd.server.memory.mob
+      default: op
+    animal:
+      node: admincmd.server.memory.animal
+      default: op
+    xp:
+      node: admincmd.server.memory.xp
+      default: op
+    item:
+      node: admincmd.server.memory.item
+      default: op
+    full:
+      node: admincmd.server.memory.full
+      default: op
+    npc:
+      node: admincmd.server.memory.npc
+      default: op
+    vehicle:
+      node: admincmd.server.memory.vehicle
+      default: op
+    cart:
+      node: admincmd.server.memory.cart
+      default: op
+    boat:
+      node: admincmd.server.memory.boat
+      default: op
+admincmd_player_mute_:
+  '*':
+    type: Group Node
+    node: admincmd.player.mute.*
+    default: op
+  mute:
+    command:
+      node: admincmd.player.mute.command
+      default: op
+admincmd_server_set_:
+  '*':
+    type: Group Node
+    node: admincmd.server.set.*
+    default: op
+  set:
+    motd:
+      node: admincmd.server.set.motd
+      default: op
+    news:
+      node: admincmd.server.set.news
+      default: op
+    rules:
+      node: admincmd.server.set.rules
+      default: op
