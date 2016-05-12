@@ -1,0 +1,36 @@
+You can use this values:
+- %prefix : gets the prefix of the player
+- %suffix : gets the suffix of the player
+- %group : gets the group of the player
+- %player : gets the name of the player
+- %displayname : gets the displayname of the player. (Mostly nicknames)
+- %faction : gets the name of the faction the player is in
+- %h : to get the current hour
+- %i : to get the current minute
+- %s : to get the current second
+- %a : to get am/pm
+- %m : to get the month as a number
+- %M : to get the name of the month
+- %y : to get the long year (ex: 2013)
+- %Y : to get the short year (ex: 13)
+- %d : to get the day of the week (ex: monday)
+- %D : to get the day of the month (ex: 19)
+- %time : used to get the current time in this format: HH:mm:ss
+
+Code  Official Name   	| Using
+ &0   Black black
+ &1   Dark Blue
+ &2   Dark Green
+ &3   Dark Aqua
+ &4   Dark Red			| MOD
+ &5   Dark Purple
+ &6   Gold				| VIP
+ &7   Gray
+ &8   Dark Gray
+ &9   Blue
+ &a   Green
+ &b   Aqua
+ &c   Red
+ &d   Light Purple
+ &e   Yellow
+ &f   White

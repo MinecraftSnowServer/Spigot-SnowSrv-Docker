@@ -15,13 +15,13 @@
 # Messages.JoinAndQuit.Enabled: Do you want to change the join and the quit messages?
 
 enable: true
-message-format: '%faction %prefix%displayname%suffix: %message'
-global-message-format: '%faction &9[%world] %prefix%displayname%suffix: &e%message'
+message-format: <%prefix%player%suffix&e&f> %message
+global-message-format: <%prefix%player%suffix@&7%world&f> %message
 ranged-mode: false
 chat-range: 100.0
 multi-prefixes: false
 multi-suffixes: false
-logChat: true
+logChat: false
 Priority: LOWEST
 Debug: false
 Locale: en-EN

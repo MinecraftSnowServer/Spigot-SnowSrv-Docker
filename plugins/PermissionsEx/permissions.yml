@@ -39,6 +39,8 @@ groups:
     - admincmd.coloredsign.create
     - admincmd.server.help
     - admincmd.spawn.tp
+    - chatex.chat.*
+    - chatex.allowchat
   VIP:
     inheritance:
     - Builder
@@ -55,4 +57,5 @@ groups:
     permissions:
     - permissions.*
     - admincmd.*
+    - chatex.*
 schema-version: 1
