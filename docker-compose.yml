@@ -1,6 +1,14 @@
-minecraft:
+db:
+  image: bitnami/mariadb
+  environment:
+    - MARIADB_USER=authme
+    - MARIADB_PASSWORD=au
+    - MARIADB_DATABASE=authme
+  volumes:
+    - ./db:/bitnami/mariadb/data
+
+server:
   image: itzg/minecraft-server:latest
-  container_name: minecraft-spigot
   environment:
     - EULA=TRUE
     - TYPE=SPIGOT
@@ -9,7 +17,7 @@ minecraft:
     - OPS=fntsrswl
     - MOTD=OOLab Server
   links:
-    - mariadb:mariadb
+    - db:mariadb
   ports:
     - "25565:25565"
     - "8123:8123"
@@ -17,20 +25,11 @@ minecraft:
     - ./server:/data
   tty: true
   stdin_open: true
-mariadb:
-  image: bitnami/mariadb
-  environment:
-    - MARIADB_USER=authme
-    - MARIADB_PASSWORD=au
-    - MARIADB_DATABASE=authme
-  ports:
-    - "13306:3306"
-  volumes:
-    - ./db:/bitnami/mariadb/data
-pwd_utility:
+
+pwd:
   build: ./pwd
   links:
-      - mariadb:mariadb
+      - db:mariadb
   ports:
     - "8000:80"
   volumes:
