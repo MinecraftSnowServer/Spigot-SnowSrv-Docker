@@ -5,4 +5,7 @@ plugins/AuthMe/GeoIP.dat
 plugins/AdminCmd/*.log
 plugins/AdminCmd/*.db
 plugins/ChatEx/logs/*.log
+plugins/dynmap/web/ids-by-ip.txt
+plugins/dynmap/web/tiles
+!plugins/dynmap/web/tiles/_markups_
 server

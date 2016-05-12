@@ -41,12 +41,12 @@ components:
     sendhealth: true
     sendposition: true
     allowwebchat: true
-    webchat-interval: 5
+    webchat-interval: 1
     hidewebchatip: false
     trustclientname: false
     includehiddenplayers: false
     # (optional) if true, color codes in player display names are used
-    use-name-colors: false
+    use-name-colors: true
     # (optional) if true, player login IDs will be used for web chat when their IPs match
     use-player-login-ip: true
     # (optional) if use-player-login-ip is true, setting this to true will cause chat messages not matching a known player IP to be ignored
@@ -394,7 +394,7 @@ quitmessage: "%playername% quit"
 
 spammessage: "You may only chat once every %interval% seconds."
 # format for messages from web: %playername% substitutes sender ID (typically IP), %message% includes text
-webmsgformat: "&color;2[WEB] %playername%: &color;f%message%"
+webmsgformat: "<&color;2[WEB]&color;f %playername%> %message%"
 
 # Control whether layer control is presented on the UI (default is true)
 showlayercontrol: true
