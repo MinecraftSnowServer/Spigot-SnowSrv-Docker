@@ -1,0 +1,25 @@
+groups:
+  Guest: {}
+
+  Builder:
+    options:
+      default: true
+    permissions:
+    - modifyworld.*
+
+  VIP:
+    inheritance:
+    - Builder
+    options:
+      prefix: '&6(VIP)&f '
+    permissions: {}
+
+  MOD:
+    inheritance:
+    - Builder
+    - VIP
+    options:
+    - prefix: '&4(MOD)&f '
+    permissions: {}
+
+schema-version: 1
