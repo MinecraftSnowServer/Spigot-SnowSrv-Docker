@@ -16,7 +16,6 @@ groups:
     - admincmd.player.msg
     - admincmd.player.ip
     - admincmd.player.ip.other
-    - admincmd.player.invisible
     - admincmd.player.np
     - admincmd.player.afk
     - admincmd.player.roll
@@ -43,6 +42,7 @@ groups:
     - chatex.allowchat
     - headdrops.myhead
     - headdrops.headinfo
+    - lift.*
   VIP:
     inheritance:
     - Builder
