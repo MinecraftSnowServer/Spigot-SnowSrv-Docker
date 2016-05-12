@@ -23,6 +23,7 @@ server:
     - "8123:8123"
   volumes:
     - ./server:/data
+    - ./plugins:/data/plugins
   tty: true
   stdin_open: true
 
