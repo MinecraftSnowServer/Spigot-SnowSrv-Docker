@@ -54,6 +54,7 @@ groups:
     - headdrops.other
     - headdrops.mobhead
     - headdrops.playerhead
+    - worldedit.*
   MOD:
     inheritance:
     - Builder
