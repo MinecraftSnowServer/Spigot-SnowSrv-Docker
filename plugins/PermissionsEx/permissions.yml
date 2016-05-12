@@ -3,11 +3,12 @@ groups:
     permissions:
     - authme.player.*
   Builder:
+    inheritance:
+    - Guest
     options:
       default: true
     permissions:
     - modifyworld.*
-    - authme.player.*
     - admincmd.kit.Tools
     - admincmd.player.list
     - admincmd.player.loc
@@ -43,6 +44,18 @@ groups:
     - headdrops.myhead
     - headdrops.headinfo
     - lift.*
+    - multiverse.access.*
+    - multiverse.core.info
+    - multiverse.core.spawn.self
+    - multiverse.help
+    - multiverse.portal.info
+    - multiverse.portal.list
+    - multiverse.portal.access.*
+    - multiverse.portals.use.*
+    - multiverse.signportal.create
+    - multiverse.signportal.validate
+    - multiverse.signportal.*
+    - multiverse.teleport.self.*
     - worldguard.region.wand
     - worldguard.region.claim
     - worldguard.region.list.own
@@ -71,18 +84,7 @@ groups:
     - worldguard.region.flag.flags.deny-spawn
     - worldguard.region.setparent.own.*
     - worldguard.region.remove.own.*
-    - multiverse.access.*
-    - multiverse.core.info
-    - multiverse.core.spawn.self
-    - multiverse.help
-    - multiverse.portal.info
-    - multiverse.portal.list
-    - multiverse.portal.access.*
-    - multiverse.portals.use.*
-    - multiverse.signportal.create
-    - multiverse.signportal.validate
-    - multiverse.signportal.*
-    - multiverse.teleport.self.*
+
   VIP:
     inheritance:
     - Builder
@@ -94,7 +96,6 @@ groups:
     - headdrops.other
     - headdrops.mobhead
     - headdrops.playerhead
-    - worldguard.region.*
     - worldedit.chunkinfo
     - worldedit.listchunks
     - worldedit.clipboard.*
@@ -120,6 +121,8 @@ groups:
     - worldedit.remove
     - worldedit.fill
     - worldedit.help
+    - worldguard.region.*
+
   MOD:
     inheritance:
     - Builder
@@ -127,12 +130,20 @@ groups:
     options:
     - prefix: '&4(MOD)&f '
     permissions:
-    - permissions.*
     - admincmd.*
+    - authme.
     - chatex.*
+    - dynmap.*
     - headdrops.*
-    - worldguard.*
-    - worldedit.*
-    - multiverse.*
     - lagg.*
+    - lift.*
+    - lockette.*
+    - multiverse.*
+    - permissions.*
+    - worldedit.*
+    - worldguard.*
+
+
+
+
 schema-version: 1
