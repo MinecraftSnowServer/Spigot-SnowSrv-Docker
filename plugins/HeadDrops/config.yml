@@ -1,0 +1,28 @@
+dropBlank: false
+permissionCheckMob: false
+permissionCheckPlayer: false
+updater: true
+auto-download-update: true
+chance:
+  blaze: 5
+  cave_spider: 5
+  chicken: 2
+  cow: 5
+  creeper: 5
+  enderman: 5
+  ghast: 5
+  iron_golem: 25
+  magma_cube: 5
+  mushroom_cow: 15
+  ocelot: 5
+  pig: 5
+  pig_zombie: 5
+  sheep: 5
+  skeleton: 5
+  slime: 5
+  spider: 5
+  squid: 5
+  villager: 75
+  wither: 40
+  player: 50
+  zombie: 5

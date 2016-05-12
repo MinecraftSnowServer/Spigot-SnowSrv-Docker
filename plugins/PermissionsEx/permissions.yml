@@ -41,6 +41,8 @@ groups:
     - admincmd.spawn.tp
     - chatex.chat.*
     - chatex.allowchat
+    - headdrops.myhead
+    - headdrops.headinfo
   VIP:
     inheritance:
     - Builder
@@ -48,6 +50,10 @@ groups:
       prefix: '&6(VIP)&f '
     permissions:
     - admincmd.item.*
+    - headdrops.head
+    - headdrops.other
+    - headdrops.mobhead
+    - headdrops.playerhead
   MOD:
     inheritance:
     - Builder
@@ -58,4 +64,5 @@ groups:
     - permissions.*
     - admincmd.*
     - chatex.*
+    - headdrops.*
 schema-version: 1
