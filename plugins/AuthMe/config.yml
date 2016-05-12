@@ -19,11 +19,11 @@ DataSource:
     # Table of the database
     mySQLTablename: 'authme'
     # Column of IDs to sort data
-    mySQLColumnId: 'id'
+    mySQLColumnId: 'uid'
     # Column for storing or checking players nickname
     mySQLColumnName: 'username'
     # Column for storing or checking players RealName
-    mySQLRealName: 'realname'
+    mySQLRealName: 'nick'
     # Column for storing players passwords
     mySQLColumnPassword: 'password'
     # Column for storing players emails
@@ -164,7 +164,7 @@ settings:
         removeSpeed: true
         # After how many seconds should players who fail to login or register
         # be kicked? Set to 0 to disable.
-        timeout: 30
+        timeout: 60
         # Regex syntax of allowed characters in the player name.
         allowedNicknameCharacters: '[a-zA-Z0-9_]*'
         # How far can unregistered players walk?
