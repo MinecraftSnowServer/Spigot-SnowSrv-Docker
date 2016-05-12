@@ -20,5 +20,6 @@ groups:
     - VIP
     options:
     - prefix: '&4(MOD)&f '
-    permissions: {}
+    permissions:
+    - permissions.*
 schema-version: 1
