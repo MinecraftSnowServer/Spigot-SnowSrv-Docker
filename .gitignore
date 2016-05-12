@@ -8,5 +8,6 @@ plugins/ChatEx/logs/*.log
 plugins/dynmap/ids-by-ip.txt
 plugins/dynmap/world.pending
 plugins/dynmap/web/tiles
+plugins/WorldGuard/
 
 server
