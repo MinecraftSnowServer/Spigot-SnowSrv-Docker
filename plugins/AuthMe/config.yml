@@ -3,17 +3,17 @@
 DataSource:
     # What type of database do you want to use?
     # Valid values: sqlite, mysql
-    backend: 'SQLITE'
+    backend: 'MYSQL'
     # Enable database caching, should improve database performance
     caching: true
     # Database host address
-    mySQLHost: '127.0.0.1'
+    mySQLHost: 'mariadb'
     # Database port
     mySQLPort: '3306'
     # Username about Database Connection Infos
     mySQLUsername: 'authme'
     # Password about Database Connection Infos
-    mySQLPassword: '12345'
+    mySQLPassword: 'authme'
     # Database Name, use with converters or as SQLITE database name
     mySQLDatabase: 'authme'
     # Table of the database
