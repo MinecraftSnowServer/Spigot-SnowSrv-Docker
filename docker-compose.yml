@@ -1,5 +1,5 @@
 db:
-  image: bitnami/mariadb
+  image: bitnami/mariadb:10.1.13-r0
   environment:
     - MARIADB_USER=authme
     - MARIADB_PASSWORD=authme
