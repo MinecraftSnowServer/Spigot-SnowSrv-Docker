@@ -1,4 +1,4 @@
-db
+data
 plugins/AuthMe/*.log
 plugins/AuthMe/*.db
 plugins/AuthMe/GeoIP.dat

@@ -5,7 +5,7 @@ db:
     - MARIADB_PASSWORD=authme
     - MARIADB_DATABASE=authme
   volumes:
-    - ./db:/bitnami/mariadb/data
+    - ./data/db:/bitnami/mariadb/data
 
 server:
   image: itzg/minecraft-server:latest
@@ -44,7 +44,7 @@ server:
     - "25565:25565"
     - "8123:8123"
   volumes:
-    - ./server:/data
+    - ./data/server:/data
     - ./plugins:/data/plugins
   tty: true
   stdin_open: true
