@@ -1,7 +1,7 @@
 groups:
   Guest:
     permissions:
-    - authme.player.*
+    - authme.player.login
   Builder:
     inheritance:
     - Guest
@@ -39,6 +39,8 @@ groups:
     - admincmd.coloredsign.create
     - admincmd.server.help
     - admincmd.spawn.tp
+    - authme.player.logout
+    - authme.player.changepassword
     - chatex.chat.*
     - chatex.allowchat
     - headdrops.myhead
@@ -131,7 +133,7 @@ groups:
       prefix: '&4(MOD)&f '
     permissions:
     - admincmd.*
-    - authme.
+    - authme.*
     - chatex.*
     - dynmap.*
     - headdrops.*
