@@ -128,7 +128,7 @@ groups:
     - Builder
     - VIP
     options:
-    - prefix: '&4(MOD)&f '
+      prefix: '&4(MOD)&f '
     permissions:
     - admincmd.*
     - authme.
