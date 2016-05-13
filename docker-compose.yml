@@ -56,6 +56,6 @@ pwd:
   ports:
     - "8000:80"
   volumes:
-    - "./pwd:/var/www/html/"
+    - ./pwd:/var/www/html
   environment:
     - WEBSITE_TITLE=麥塊帳號管理網站 - Minecraft PWD Utility
