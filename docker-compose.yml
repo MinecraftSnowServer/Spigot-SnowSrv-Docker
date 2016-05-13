@@ -10,12 +10,34 @@ db:
 server:
   image: itzg/minecraft-server:latest
   environment:
-    - EULA=TRUE
+    # System
     - TYPE=SPIGOT
     - VERSION=1.8.8
+    - JVM_OPTS=-Xmx1024M -Xms1024M
+    - VIEW_DISTANCE=10
+
+    # Sever
+    - EULA=TRUE
+    - OPS=admin
+    - MOTD=My Mincraft Server
+
+    # World
+    - HARDCORE=false
+    - MODE=survival
     - DIFFICULTY=hard
-    - OPS=fntsrswl
-    - MOTD=OOLab Server
+    - LEVEL_TYPE=DEFAULT
+    - MAX_PLAYERS=10
+    - MAX_WORLD_SIZE=10000
+    - MAX_BUILD_HEIGHT=256
+    - PVP=false
+    - GENERATE_STRUCTURES=true
+    - SPAWN_ANIMALS=true
+    - SPAWN_MONSTERS=true
+    - SPAWN_NPCS=true
+
+    # To know other Environment variables,
+    # please visit https://github.com/itzg/dockerfiles/tree/master/minecraft-server
+
   links:
     - db:mariadb
   ports:
