@@ -1,4 +1,4 @@
-db:
+authdb:
   image: bitnami/mariadb:10.1.13-r0
   environment:
     - MARIADB_USER=authme
@@ -39,7 +39,7 @@ server:
     # please visit https://github.com/itzg/dockerfiles/tree/master/minecraft-server
 
   links:
-    - db:mariadb
+    - authdb:authdb
   ports:
     - "25565:25565"
     - "8123:8123"
@@ -52,7 +52,7 @@ server:
 pwd:
   build: ./pwd
   links:
-      - db:mariadb
+    - authdb:authdb
   ports:
     - "8000:80"
   volumes:
