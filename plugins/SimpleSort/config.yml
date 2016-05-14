@@ -1,0 +1,5 @@
+# enable-wand: Whether or not to allow sorting with the wand.
+# wand: The item ID of the chest-sorting wand (0 for hand).
+# stack-all: Whether or not to stack all item types to 64.
+wand: 280
+stack-all: false
