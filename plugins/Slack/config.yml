@@ -3,7 +3,15 @@ webhook: https://hooks.slack.com/services/
 debug: false
 send-commands: false
 use-perms: false
-use-blacklist: false
+use-blacklist: true
 blacklist:
 - /login
 - /register
+- /msg
+incoming-webhook:
+  enable: true
+  bindaddress: 0.0.0.0
+  port: 25560
+  max-connections: 30
+  token:
+  msgformat: '&color;f[&color;5Slack&color;f] <%username%> %message%'
