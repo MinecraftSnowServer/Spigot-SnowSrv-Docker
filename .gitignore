@@ -16,6 +16,6 @@ plugins/Multiverse-Portals/*.log
 plugins/Multiverse-Portals/*.log.*
 plugins/Multiverse-Portals/*.lck
 plugins/Multiverse-Portals/portals.yml
-
+plugins/TreeLogging/*.sqlite3
 
 server
