@@ -1,5 +1,5 @@
 version: 1.5.0
-webhook: https://hooks.slack.com/services/
+webhook: https://hooks.slack.com/services/XXXXXXXXXXXXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
 debug: false
 send-commands: false
 use-perms: false
@@ -13,5 +13,5 @@ incoming-webhook:
   bindaddress: 0.0.0.0
   port: 25560
   max-connections: 30
-  token:
+  token: XXXXXXXXXXXXXXXXXXXXXXXX
   msgformat: '&color;f[&color;5Slack&color;f] <%username%> %message%'
