@@ -5,7 +5,7 @@ DataSource:
     # Valid values: sqlite, mysql
     backend: 'MYSQL'
     # Enable database caching, should improve database performance
-    caching: true
+    caching: false
     # Database host address
     mySQLHost: 'authdb'
     # Database port
@@ -43,17 +43,17 @@ DataSource:
     # Column for storing player LastLocation - World Name
     mySQLlastlocWorld: 'world'
     # Enable this when you allow registration through a website
-    mySQLWebsite: false
+    mySQLWebsite: true
 
 ExternalBoardOptions:
     # Column for storing players passwords salts
     mySQLColumnSalt: ''
     # Column for storing players groups
-    mySQLColumnGroup: ''
+    mySQLColumnGroup: 'group'
     # -1 means disabled. If you want that only activated players
     # can log into your server, you can set here the group number
     # of unactivated users, needed for some forum/CMS support
-    nonActivedUserGroup: -1
+    nonActivedUserGroup: 4
     # Other MySQL columns where we need to put the username (case-sensitive)
     mySQLOtherUsernameColumns: []
     # How much log2 rounds needed in BCrypt (do not change if you do not know what it does)
@@ -87,13 +87,13 @@ settings:
         # The next time the player joins the server, if his IP
         # is the same as last time and the timeout hasn't
         # expired, he will not need to authenticate.
-        enabled: false
+        enabled: true
         # After how many minutes should a session expire?
         # 0 for unlimited time (Very dangerous, use it at your own risk!)
         # Remember that sessions will end only after the timeout, and
         # if the player's IP has changed but the timeout hasn't expired,
         # the player will be kicked from the server due to invalid session
-        timeout: 10
+        timeout: 20
         # Should the session expire if the player tries to log in with
         # another IP address?
         sessionExpireOnIpChange: true
@@ -116,11 +116,13 @@ settings:
         allowCommands:
         - '/login'
         - '/l'
+        - '/register'
+        - '/r'
         # Max number of allowed registrations per IP
         # The value 0 means an unlimited number of registrations!
-        maxRegPerIp: 1
+        maxRegPerIp: 10
         # Minimum allowed username length
-        minNicknameLength: 4
+        minNicknameLength: 3
         # Maximum allowed username length
         maxNicknameLength: 16
         # When this setting is enabled, online players can't be kicked out
@@ -134,7 +136,7 @@ settings:
         # back to his quit location after the authentication.
         ForceSpawnLocOnJoinEnabled: false
         # This option will save the quit location of the players.
-        SaveQuitLocation: false
+        SaveQuitLocation: true
         # To activate the restricted user feature you need
         # to enable this option and configure the AllowedRestrictedUser field.
         AllowRestrictedUser: false
@@ -146,13 +148,13 @@ settings:
         AllowedRestrictedUser:
         - 'playername;127.0.0.1'
         # Should unregistered players be kicked immediately?
-        kickNonRegistered: false
+        kickNonRegistered: true
         # Should players be kicked on wrong password?
         kickOnWrongPassword: false
         # Should not logged in players be teleported to the spawn?
         # After the authentication they will be teleported back to
         # their normal position.
-        teleportUnAuthedToSpawn: false
+        teleportUnAuthedToSpawn: true
         # Can unregistered players walk around?
         allowMovement: false
         # Should not authenticated players have speed = 0?
@@ -211,9 +213,9 @@ settings:
         UnrestrictedName: []
     security:
         # Minimum length of password
-        minPasswordLength: 5
+        minPasswordLength: 4
         # Maximum length of password
-        passwordMaxLength: 30
+        passwordMaxLength: 32
         # This is a very important option: every time a player joins the server,
         # if they are registered, AuthMe will switch him to unLoggedInGroup.
         # This should prevent all major exploits.
@@ -248,10 +250,10 @@ settings:
         - '54321'
     registration:
         # Enable registration on the server?
-        enabled: false
+        enabled: true
         # Send every X seconds a message to a player to
         # remind him that he has to login/register
-        messageInterval: 5
+        messageInterval: 60
         # Only registered and logged in players can play.
         # See restrictions for exceptions
         force: true
@@ -352,12 +354,11 @@ Protection:
     # Countries allowed to join the server and register, see http://dev.bukkit.org/bukkit-plugins/authme-reloaded/pages/countries-codes/ for countries' codes
     # PLEASE USE QUOTES!
     countries:
-    - 'US'
-    - 'GB'
+    - 'TW'
     # Countries not allowed to join the server and register
     # PLEASE USE QUOTES!
     countriesBlacklist:
-    - 'A1'
+    - 'CN'
     # Do we need to enable automatic antibot system?
     enableAntiBot: false
     # Max number of players allowed to login in 5 secs before the AntiBot system is enabled automatically
@@ -398,7 +399,7 @@ Security:
         # Remove passwords from console?
         removePassword: true
         # Copy AuthMe log output in a separate file as well?
-        logConsole: true
+        logConsole: false
     captcha:
         # Player need to put a captcha when he fails too lot the password
         useCaptcha: false
