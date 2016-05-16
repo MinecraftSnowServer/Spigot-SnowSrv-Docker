@@ -3,8 +3,9 @@ Snow's Minecraft Server all in one docker pack
 
 雪服架設懶人包
 
-
 ## Setup
+
+請先在您的伺服器上安裝好 git、Docker 和 Docker-Compose。
 
 ```bash
 git clone https://github.com/MinecraftSnowServer/Server-Docker.git MinecraftServer
@@ -13,9 +14,14 @@ git submodule init
 git submodule update
 
 # Edit environment variables in docker-compose.yml
+# 編輯在 docker-compose.yml 中的環境變數。
 
 COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 ```
+
+第一次架設會耗費些許時間在下載伺服器檔案，請耐心等待。
+
+架設好後，請先到帳號管理系統（PWD）註冊帳號，第一個註冊帳號的人會直接獲得管理權限。目前帳號管理系統的群組尚未與遊戲綁定，請特別留意。
 
 ## Server
 
@@ -39,6 +45,7 @@ COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 | Multiverse-Portals        | 2.5               | Multiverse	        	|
 | Multiverse-SignPortals    | 2.5               | Multiverse	        	|
 | PermissionEx              | 1.23.3            | Permission management		|
+| SimpleSort				| 1.4 				| Sort inventory & chest    |
 | Slack                     | 1.5               | Sync messages with Slack  |
 | TreeLogging               | 0.3.2             | Logging with easy way     |
 | WorldEdit                 | 6.1               | Powerful bulding tool     |
