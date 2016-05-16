@@ -1,7 +1,15 @@
 Snow's Minecraft Server all in one docker pack
 -----
 
-雪服架設懶人包
+雪服架設懶人包，目前整合有：
+
+- Spigot 1.8.8
+- 雪服有在用的 Bukkit Plugins （詳見下表）
+- 雪服的帳號管理系統
+
+主要是利用 Docker 協助伺服器的一令架設，並且保持資料與伺服器程式與環境分離的機制，讓使用這個專案架設 Spigot 伺服器的開發者可以方便昇級、遷移自己的伺服器版本、環境與資料。
+
+也順便練習一下 Docker 和 Minecraft 伺服器架設囉。
 
 ## Setup
 
@@ -24,10 +32,6 @@ COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 第一次架設會耗費些許時間在下載伺服器檔案，請耐心等待。
 
 架設好後，請先到帳號管理系統（PWD）註冊帳號，第一個註冊帳號的人會直接獲得管理權限。目前帳號管理系統的群組尚未與遊戲綁定，請特別留意。
-
-## Server
-
-- Spigot 1.8.8
 
 ## Plugins
 
@@ -61,3 +65,9 @@ COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 | ------------------------- | ----------------- | ------------------------- |
 | BKCommonLib               | v1.59             | Dependency of TrainCarts  |
 | TrainCarts                | v1.73.0           | Make carts more intrest	|
+
+# License
+
+本專案採用 MIT 授權條款，僅包含本專案所寫腳本，不包括 Bukkit 插件本身、Git Submodule 專案、執行後下載的任何資料或執行檔。
+
+若要架設 Mincraft 伺服器，請使用正版的帳號與客戶端（Client），並且遵守 [EULA 條款 (MINECRAFT 使用者授權合約)](https://account.mojang.com/documents/minecraft_eula) 。
