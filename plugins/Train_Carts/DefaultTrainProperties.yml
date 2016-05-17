@@ -1,0 +1,100 @@
+default:
+  soundEnabled: true
+  displayName: ''
+  allowPlayerTake: true
+  requirePoweredMinecart: false
+  trainCollision: true
+  keepChunksLoaded: false
+  speedLimit: 0.4
+  slowDown: true
+  allowManualMovement: false
+  collision: 
+    mobs: DEFAULT
+    players: DEFAULT
+    misc: PUSH
+    train: LINK
+  owners: []
+  ownerPermissions: []
+  tags: []
+  allowPlayerEnter: true
+  allowPlayerExit: true
+  isPublic: true
+  pickUp: false
+  exitOffset: 
+    ==: Vector
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  exitYaw: 0.0
+  exitPitch: 0.0
+  blockBreakTypes: []
+  destination: ''
+  enterMessage: ''
+  spawnItemDrops: true
+admin:
+  soundEnabled: true
+  displayName: ''
+  allowPlayerTake: true
+  requirePoweredMinecart: false
+  trainCollision: true
+  keepChunksLoaded: false
+  speedLimit: 0.4
+  slowDown: true
+  allowManualMovement: false
+  collision: 
+    mobs: DEFAULT
+    players: DEFAULT
+    misc: PUSH
+    train: LINK
+  owners: []
+  ownerPermissions: []
+  tags: []
+  allowPlayerEnter: true
+  allowPlayerExit: true
+  isPublic: true
+  pickUp: false
+  exitOffset: 
+    ==: Vector
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  exitYaw: 0.0
+  exitPitch: 0.0
+  blockBreakTypes: []
+  destination: ''
+  enterMessage: ''
+  spawnItemDrops: true
+spawner:
+  soundEnabled: true
+  displayName: ''
+  allowPlayerTake: true
+  requirePoweredMinecart: false
+  trainCollision: true
+  keepChunksLoaded: false
+  speedLimit: 0.4
+  slowDown: true
+  allowManualMovement: false
+  collision: 
+    mobs: DEFAULT
+    players: DEFAULT
+    misc: PUSH
+    train: LINK
+  owners: []
+  ownerPermissions: []
+  tags: []
+  allowPlayerEnter: true
+  allowPlayerExit: true
+  isPublic: true
+  pickUp: false
+  exitOffset: 
+    ==: Vector
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  exitYaw: 0.0
+  exitPitch: 0.0
+  blockBreakTypes: []
+  destination: ''
+  enterMessage: ''
+  spawnItemDrops: true
+

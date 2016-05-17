@@ -58,6 +58,54 @@ groups:
     - multiverse.signportal.validate
     - multiverse.signportal.*
     - multiverse.teleport.self.*
+    - train.command.globalproperties
+    - train.command.properties
+    - train.command.destroy
+    - train.command.destroyall
+    - train.command.reroute
+    - train.command.reload
+    - train.command.break
+    - train.command.breakblock
+    - train.command.setpublic
+    - train.command.setowners
+    - train.command.settags
+    - train.command.mobenter
+    - train.command.setdestination
+    - train.command.playerenter
+    - train.command.playerexit
+    - train.command.pickup
+    - train.command.setlinking
+    - train.command.keepchunksloaded
+    - train.command.pushing
+    - train.command.slowdown
+    - train.command.setcollide
+    - train.command.setspeedlimit
+    - train.command.setpoweredcartrequirement
+    - train.command.rename
+    - train.command.displayname
+    - train.command.fixbugged
+    - train.command.manualmove
+    - train.command.saveall
+    - train.build.station
+    - train.build.trigger
+    - train.build.spawner
+    - train.build.destination
+    - train.build.switcher
+    - train.build.destructor
+    - train.build.detector
+    - train.build.ejector
+    - train.build.property
+    - train.build.collector
+    - train.build.depositor
+    - train.build.elevator
+    - train.build.teleporter
+    - train.build.blocker
+    - train.build.wait
+    - train.build.crafter
+    - train.build.ticket
+    - train.build.announcer
+    - train.build.effect
+    - train.place.minecart
     - worldguard.region.wand
     - worldguard.region.claim
     - worldguard.region.list.own
@@ -142,6 +190,7 @@ groups:
     - lockette.*
     - multiverse.*
     - permissions.*
+    - train.*
     - worldedit.*
     - worldguard.*
 

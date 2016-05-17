@@ -1,0 +1,153 @@
+#> This is the configuration file of TrainCarts
+#> In here you can tweak TrainCarts to what you want
+#> For more information, you can visit the following websites:
+#> http://www.minecraftwiki.net/wiki/Bukkit/TrainCarts
+#> http://forums.bukkit.org/threads/traincarts.29491/
+
+# The distance between two normally-aligned (straight) carts in a train
+normal:
+  # The distance between two carts in a train
+  cartDistance: 1.5
+  # The factor at which this distance is kept
+  cartDistanceForcer: 0.1
+
+# Settings for turned (in curve) carts
+turned:
+  # The distance between two carts in a train
+  cartDistance: 1.6
+  # The factor at which this distance is kept
+  cartDistanceForcer: 0.2
+
+# The 'keep distance' factor to apply when carts are too close to each other
+nearCartDistanceFactor: 1.2
+
+# The maximum allowed cart distance, after this distance the carts break apart
+maxCartDistance: 4.0
+
+# Whether or not the combined carts (powered/storage minecarts) break up into two items
+breakCombinedCarts: false
+
+# A performance boost to give to powered minecarts (0 = normal speed)
+poweredCartBoost: 0.1
+
+# The boosting factor of powered rails (default = 0.06)
+poweredRailBoost: 0.06
+
+# The maximum velocity (blocks/tick) a minecart can possibly have set
+maxVelocity: 5.0
+
+# The multiplier used to slow down minecarts
+# Normal is the default, slow is when the minecart is meant to slow down.
+slowDownMultiplier:
+  normal: 0.997
+  slow: 0.96
+
+# The maximum allowed ejection distance for eject signs
+maxEjectDistance: 10.0
+
+# The amount of velocity stations give when launching trains
+launchForce: 10.0
+
+# Settings used when carts collide with entities
+collision:
+  # If train owners are ignored
+  ignoreOwners: false
+  # If global train owners are ignored
+  ignoreGlobalOwners: false
+  # The amount of force at which minecarts push away others
+  pushAwayForce: 0.2
+
+# Whether or not all minecarts spawned on the server turn into TrainCarts' Minecarts
+# Note that the TrainCart placement permission is then no longer active
+allMinecartsAreTrainCarts: false
+
+# Whether or not powered minecarts obtain their coal from attached storage minecarts
+useCoalFromStorageCart: false
+
+# Whether or not the player that places a minecart is set owner
+setOwnerOnPlacement: true
+
+# Whether or not a hissing sound is made when trains stop at a station
+playSoundAtStation: true
+
+# Whether or not chunks are only kept loaded when the train is moving
+keepChunksLoadedOnlyWhenMoving: false
+
+# Advanced: Whether trains use a different way of server->client synchronization
+# With this enabled, trains are expected to move smoother with less bumping
+# With this disabled, no smoothing is applied. Only disable it if it causes problems/incompatibility
+useNetworkSynchronizer: true
+
+# The maximum length a detector region (between two detectors) can be
+maxDetectorLength: 2000
+
+# The maximum amount of minecart items that can be stacked in one item
+maxMinecartStackSize: 64
+
+# The maximum radius chest/furnace sign systems look for the needed blocks
+maxTransferRadius: 5
+
+# The default radius chest/furnace sign systems look for the needed blocks
+defaultTransferRadius: 2
+
+# Whether or not empty minecarts slow down faster than occupied minecarts
+slowDownEmptyCarts: false
+
+# Whether storage minecarts get fuel when launching from stations
+refillAtStations: true
+
+# Whether minecarts are instantly destroyed by creative players
+# Note that manual minecart movement is not possible for creative players with this enabled
+instantCreativeDestroy: false
+
+# Whether minecarts are allowed to have a 90-degree pitch angle when going up vertical rails
+# When disabled, minecarts will keep a 0-degree pitch angle instead
+allowVerticalPitch: true
+
+# Whether players (with build permissions) can edit existing rails by right-clicking on them
+allowRailEditing: true
+
+# What velocity to set when a player tries to manually move a train (by damaging it)
+manualMovementSpeed: 12.0
+
+# The currency Ticket signs will display in messages, %value% represents the displayed value
+currencyFormat: '%value% Dollars'
+
+# The delay (in ticks) between ejecting and re-entering by collision (e.g. mobs auto-entering carts)
+collisionReEnterDelay: 100
+
+# A list of world names where TrainCarts should be disabled
+# World names are not case-sensitive
+disabledWorlds:
+- DefaultWorld1
+- DefaultWorld2
+
+# The block materials that can be broken using minecarts
+# Players with the admin block break permission can use any type
+# Others have to use one from this list
+allowedBlockBreakTypes:
+- LOG
+- CROPS
+
+# Whether or not to show item animations when transferring items
+showTransferAnimations: true
+
+# Several shortcuts you can use on announce signs (text is replaced)
+messageShortcuts:
+  welcome: '&eWelcome to &f'
+
+# Several shortcuts you can use on switcher and detector signs (text is replaced)
+statementShortcuts:
+  diamond: i@diamond
+
+# Several shortcuts you can use on signs to set the items
+itemShortcuts:
+  fuel: ''
+  heatable: ''
+  armor: diamond_boots;gold_leggings;gold_chestplate;leather_chestplate;iron_leggings;iron_chestplate;diamond_leggings;leather_helmet;leather_boots;gold_helmet;gold_boots;chainmail_boots;diamond_chestplate;iron_boots;chainmail_helmet;leather_leggings;chainmail_chestplate;diamond_helmet;chainmail_leggings;iron_helmet
+  sword: wood_sword;stone_sword;iron_sword;gold_sword;iron_sword;diamond_sword
+  boots: leather_boots;iron_boots;gold_boots;diamond_boots;chainmail_boots
+  leggins: leather_leggings;iron_leggings;gold_leggings;diamond_leggings;chainmail_leggings
+  chestplate: leather_chestplate;iron_chestplate;gold_chestplate;diamond_chestplate;chainmail_chestplate
+  helmet: leather_helmet;iron_helmet;gold_helmet;diamond_helmet;chainmail_helmet
+

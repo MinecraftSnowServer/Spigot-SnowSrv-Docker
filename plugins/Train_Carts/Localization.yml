@@ -1,0 +1,27 @@
+#> Below are the localization nodes set for plugin 'Train_Carts'.
+#> For colors, use the & character followed up by 0 - F
+#> Need help with this file? Please visit:
+#> http://dev.bukkit.org/server-mods/bkcommonlib/pages/general/localization/
+commands:
+  cart:
+    description: Perform TrainCarts commands for single minecarts
+    usage: See development or WIKI page of TrainCarts
+  train:
+    description: Perform TrainCarts commands for complete trains
+    usage: See development or WIKI page of TrainCarts
+command:
+  about: TrainCarts %0% - See WIKI page for more information
+  noperm: &cYou do not have permission, ask an admin to do this for you.
+ticket:
+  add: &f[Ticket System]&e You received %0% in your bank account!
+  check: &f[Ticket System]&e You currently have %0% in your bank account!
+  buyfail: &f[Ticket System]&c You can't afford a Ticket for %0%, sorry.
+  buy: &f[Ticket System]&e You bought a Ticket for %0%.
+edit:
+  noselect: &eYou haven't selected a train to edit yet!
+  notallowed: &cYou are not allowed to own trains!
+  nonefound: &cYou do not own any trains you can edit.
+  notowned: &cYou do not own this train!
+select:
+  destination: &eYou have selected &f%0%&e as your destination!
+
