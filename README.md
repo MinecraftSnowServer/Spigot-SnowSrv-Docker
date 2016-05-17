@@ -39,6 +39,7 @@ COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 | ------------------------- | ----------------- | ------------------------- |
 | AdminCmd                  | 8.0.0-SNAPSHOT    | Useful Commands collection|
 | AuthMe                    | 5.2-Beta2         | User validation           |
+| BKCommonLib               | 1.67-SNAPSHOT		| Dependency of TrainCarts  |
 | ChatEx                    | 1.3.0             | Chat feature improvement  |
 | ClearLag                  | 2.9.1             | Prevent too many entities |
 | Dynmap                    | 2.2               | Web map                   |
@@ -53,18 +54,10 @@ COMPOSE_HTTP_TIMEOUT=3600 docker-compose up -d
 | PermissionEx              | 1.23.3            | Permission management		|
 | SimpleSort				| 1.4 				| Sort inventory & chest    |
 | Slack                     | 1.5               | Sync messages with Slack  |
+| TrainCarts                | 1.73.0           	| Make carts more intrest	|
 | TreeLogging               | 0.3.2             | Logging with easy way     |
 | WorldEdit                 | 6.1               | Powerful bulding tool     |
 | WorldGuard                | 6.1               | Region manager 			|
-
-### Incompatible
-
-## Plugins
-
-| Name                      | Version           | Usage                     |
-| ------------------------- | ----------------- | ------------------------- |
-| BKCommonLib               | v1.59             | Dependency of TrainCarts  |
-| TrainCarts                | v1.73.0           | Make carts more intrest	|
 
 # License
 
