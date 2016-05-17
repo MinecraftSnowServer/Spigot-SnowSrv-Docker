@@ -8,133 +8,131 @@ groups:
     options:
       default: true
     permissions:
-    - modifyworld.*
+    - admincmd.coloredsign.create
     - admincmd.kit.Tools
-    - admincmd.player.list
-    - admincmd.player.loc
-    - admincmd.player.kill
+    - admincmd.player.afk
     - admincmd.player.clear
-    - admincmd.player.msg
+    - admincmd.player.fly
+    - admincmd.player.fly.allowed
     - admincmd.player.ip
     - admincmd.player.ip.other
+    - admincmd.player.kill
+    - admincmd.player.list
+    - admincmd.player.loc
+    - admincmd.player.msg
     - admincmd.player.np
-    - admincmd.player.afk
-    - admincmd.player.roll
-    - admincmd.player.fly
     - admincmd.player.played
-    - admincmd.player.whois
-    - admincmd.player.reply
     - admincmd.player.pres
-    - admincmd.player.fly.allowed
-    - admincmd.tp.to
-    - admincmd.tp.*
-    - admincmd.tp.here
-    - admincmd.tp.location
-    - admincmd.tp.see
-    - admincmd.tp.back
-    - admincmd.tp.toggle.allow
-    - admincmd.tp.home
-    - admincmd.warp.tp
-    - admincmd.warp.tp.other
-    - admincmd.coloredsign.create
+    - admincmd.player.reply
+    - admincmd.player.roll
+    - admincmd.player.whois
     - admincmd.server.help
     - admincmd.spawn.tp
-    - authme.player.logout
+    - admincmd.tp.*
+    - admincmd.tp.back
+    - admincmd.tp.here
+    - admincmd.tp.home
+    - admincmd.tp.location
+    - admincmd.tp.see
+    - admincmd.tp.to
+    - admincmd.tp.toggle.allow
+    - admincmd.warp.tp
+    - admincmd.warp.tp.other
     - authme.player.changepassword
-    - chatex.chat.*
+    - authme.player.logout
     - chatex.allowchat
-    - headdrops.myhead
+    - chatex.chat.*
     - headdrops.headinfo
+    - headdrops.myhead
     - lift.*
     - multiverse.access.*
     - multiverse.core.info
     - multiverse.core.spawn.self
     - multiverse.help
+    - multiverse.portal.access.*
     - multiverse.portal.info
     - multiverse.portal.list
-    - multiverse.portal.access.*
     - multiverse.portals.use.*
+    - multiverse.signportal.*
     - multiverse.signportal.create
     - multiverse.signportal.validate
-    - multiverse.signportal.*
     - multiverse.teleport.self.*
-    - train.command.globalproperties
-    - train.command.properties
-    - train.command.destroy
-    - train.command.destroyall
-    - train.command.reroute
-    - train.command.reload
-    - train.command.break
-    - train.command.breakblock
-    - train.command.setpublic
-    - train.command.setowners
-    - train.command.settags
-    - train.command.mobenter
-    - train.command.setdestination
-    - train.command.playerenter
-    - train.command.playerexit
-    - train.command.pickup
-    - train.command.setlinking
-    - train.command.keepchunksloaded
-    - train.command.pushing
-    - train.command.slowdown
-    - train.command.setcollide
-    - train.command.setspeedlimit
-    - train.command.setpoweredcartrequirement
-    - train.command.rename
-    - train.command.displayname
-    - train.command.fixbugged
-    - train.command.manualmove
-    - train.command.saveall
-    - train.build.station
-    - train.build.trigger
-    - train.build.spawner
+    - train.build.announcer
+    - train.build.blocker
+    - train.build.collector
+    - train.build.crafter
+    - train.build.depositor
     - train.build.destination
-    - train.build.switcher
     - train.build.destructor
     - train.build.detector
-    - train.build.ejector
-    - train.build.property
-    - train.build.collector
-    - train.build.depositor
-    - train.build.elevator
-    - train.build.teleporter
-    - train.build.blocker
-    - train.build.wait
-    - train.build.crafter
-    - train.build.ticket
-    - train.build.announcer
     - train.build.effect
+    - train.build.ejector
+    - train.build.elevator
+    - train.build.property
+    - train.build.spawner
+    - train.build.station
+    - train.build.switcher
+    - train.build.teleporter
+    - train.build.ticket
+    - train.build.trigger
+    - train.build.wait
+    - train.command.break
+    - train.command.breakblock
+    - train.command.destroy
+    - train.command.destroyall
+    - train.command.displayname
+    - train.command.fixbugged
+    - train.command.globalproperties
+    - train.command.keepchunksloaded
+    - train.command.manualmove
+    - train.command.mobenter
+    - train.command.pickup
+    - train.command.playerenter
+    - train.command.playerexit
+    - train.command.properties
+    - train.command.pushing
+    - train.command.reload
+    - train.command.rename
+    - train.command.reroute
+    - train.command.saveall
+    - train.command.setcollide
+    - train.command.setdestination
+    - train.command.setlinking
+    - train.command.setowners
+    - train.command.setpoweredcartrequirement
+    - train.command.setpublic
+    - train.command.setspeedlimit
+    - train.command.settags
+    - train.command.slowdown
     - train.place.minecart
-    - worldguard.region.wand
-    - worldguard.region.claim
-    - worldguard.region.list.own
-    - worldguard.region.info.own.*
-    - worldguard.region.addowner.own.*
-    - worldguard.region.removeowner.own.*
     - worldguard.region.addmember.own.*
-    - worldguard.region.removemember.own.*
-    - worldguard.region.flag.regions.own.*
-    - worldguard.region.flag.flags.pvp
-    - worldguard.region.flag.flags.mob-spawning
-    - worldguard.region.flag.flags.creeper-explosion
-    - worldguard.region.flag.flags.other-explosion
-    - worldguard.region.flag.flags.enderman-grief
-    - worldguard.region.flag.flags.fire-spread
-    - worldguard.region.flag.flags.lava-fire
+    - worldguard.region.addowner.own.*
+    - worldguard.region.claim
     - worldguard.region.flag.flags.chest-access
-    - worldguard.region.flag.flags.water-flow
-    - worldguard.region.flag.flags.lava-flow
-    - worldguard.region.flag.flags.use
-    - worldguard.region.flag.flags.vehicle-place
-    - worldguard.region.flag.flags.vehicle-destroy
-    - worldguard.region.flag.flags.grass-growth
+    - worldguard.region.flag.flags.creeper-explosion
+    - worldguard.region.flag.flags.deny-spawn
+    - worldguard.region.flag.flags.enderman-grief
     - worldguard.region.flag.flags.entry
     - worldguard.region.flag.flags.farewell
-    - worldguard.region.flag.flags.deny-spawn
-    - worldguard.region.setparent.own.*
+    - worldguard.region.flag.flags.fire-spread
+    - worldguard.region.flag.flags.grass-growth
+    - worldguard.region.flag.flags.lava-fire
+    - worldguard.region.flag.flags.lava-flow
+    - worldguard.region.flag.flags.mob-spawning
+    - worldguard.region.flag.flags.other-explosion
+    - worldguard.region.flag.flags.pvp
+    - worldguard.region.flag.flags.use
+    - worldguard.region.flag.flags.vehicle-destroy
+    - worldguard.region.flag.flags.vehicle-place
+    - worldguard.region.flag.flags.water-flow
+    - worldguard.region.flag.regions.own.*
+    - worldguard.region.info.own.*
+    - worldguard.region.list.own
     - worldguard.region.remove.own.*
-
+    - worldguard.region.removemember.own.*
+    - worldguard.region.removeowner.own.*
+    - worldguard.region.setparent.own.*
+    - worldguard.region.wand
   VIP:
     inheritance:
     - Builder
@@ -142,37 +140,40 @@ groups:
       prefix: '&6(VIP)&f '
     permissions:
     - admincmd.item.*
+    - admincmd.mob.*
+    - admincmd.player.gamemode
     - headdrops.head
-    - headdrops.other
     - headdrops.mobhead
+    - headdrops.other
     - headdrops.playerhead
-    - worldedit.chunkinfo
-    - worldedit.listchunks
-    - worldedit.clipboard.*
-    - worldedit.help
-    - worldedit.generation.*
-    - worldedit.history.*
-    - worldedit.selection.*
-    - worldedit.wand.*
     - worldedit.analysis.*
-    - worldedit.tool.*
     - worldedit.brush.*
+    - worldedit.butcher
+    - worldedit.chunkinfo
+    - worldedit.clipboard.*
     - worldedit.drain
+    - worldedit.extinguish
+    - worldedit.fill
     - worldedit.fixlava
     - worldedit.fixwater
+    - worldedit.generation.*
+    - worldedit.green
+    - worldedit.help
+    - worldedit.help
+    - worldedit.history.*
+    - worldedit.listchunks
+    - worldedit.regen
+    - worldedit.region.*
+    - worldedit.remove
     - worldedit.removeabove
     - worldedit.removebelow
     - worldedit.removenear
+    - worldedit.selection.*
     - worldedit.snow
     - worldedit.thaw
-    - worldedit.green
-    - worldedit.extinguish
-    - worldedit.butcher
-    - worldedit.remove
-    - worldedit.fill
-    - worldedit.help
+    - worldedit.tool.*
+    - worldedit.wand.*
     - worldguard.region.*
-
   MOD:
     inheritance:
     - Builder
@@ -182,6 +183,7 @@ groups:
     permissions:
     - admincmd.*
     - authme.*
+    - bukkit.*
     - chatex.*
     - dynmap.*
     - headdrops.*
@@ -193,8 +195,4 @@ groups:
     - train.*
     - worldedit.*
     - worldguard.*
-
-
-
-
 schema-version: 1
