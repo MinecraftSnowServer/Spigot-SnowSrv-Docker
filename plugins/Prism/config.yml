@@ -1,0 +1,218 @@
+prism:
+  debug: false
+  allow-metrics: true
+  database:
+    max-pool-connections: 20
+    pool-initial-size: 10
+    max-idle-connections: 10
+    max-wait: 30000
+    max-failures-before-wait: 5
+    actions-per-insert-batch: 1000
+    force-write-queue-on-shutdown: true
+  mysql:
+    hostname: 127.0.0.1
+    username: root
+    password: ''
+    database: minecraft
+    prefix: prism_
+    port: '3306'
+  paste:
+    enable: false
+    username: Username on http://pste.me/#/signup
+    api-key: API key from http://pste.me/#/account
+  wands:
+    default-mode: hand
+    default-item-mode-id: '280:0'
+    default-block-mode-id: '17:1'
+    auto-equip: true
+    allow-user-override: true
+    inspect:
+      ignore-actions:
+      - player-chat
+      - player-command
+      - player-join
+      - player-quit
+  queries:
+    default-radius: 5
+    default-time-since: 3d
+    max-lookup-radius: 100
+    max-applier-radius: 100
+    never-use-defaults: false
+    lookup-max-results: 1000
+    default-results-per-page: 5
+    lookup-auto-group: true
+  messenger:
+    always-show-extended: false
+  near:
+    default-radius: 5
+    max-results: 100
+  drain:
+    max-radius: 10
+    default-radius: 5
+  ex:
+    max-radius: 100
+    default-radius: 10
+  ignore:
+    enable-perm-nodes: false
+    players-in-creative: false
+    players: []
+    players_whitelist: false
+    worlds: []
+    worlds_whitelist: false
+  db-records-purge-rules:
+  - before:8w
+  - a:water-flow before:4w
+  purge:
+    batch-tick-delay: 60
+    records-per-batch: 500000
+  appliers:
+    allow-rollback-items-removed-from-container: true
+    notify-nearby:
+      enabled: true
+      additional-radius: 20
+    remove-fire-on-burn-rollback: true
+    remove-drops-on-explode-rollback: true
+    never-spawn-entity:
+    - creeper
+    never-place-block:
+    - 10
+    - 11
+    - 46
+    - 51
+  tracking:
+    block-break: true
+    block-burn: true
+    block-dispense: true
+    block-fade: true
+    block-fall: true
+    block-form: true
+    block-place: true
+    block-shift: true
+    block-spread: true
+    block-use: true
+    bucket-fill: true
+    bonemeal-use: true
+    container-access: true
+    cake-eat: true
+    craft-item: false
+    creeper-explode: true
+    crop-trample: true
+    dragon-eat: true
+    enchant-item: false
+    enderman-pickup: true
+    enderman-place: true
+    entity-break: true
+    entity-dye: false
+    entity-explode: true
+    entity-follow: true
+    entity-form: true
+    entity-kill: true
+    entity-leash: true
+    entity-shear: true
+    entity-spawn: true
+    entity-unleash: true
+    fireball: true
+    fire-spread: false
+    firework-launch: true
+    hangingitem-break: true
+    hangingitem-place: true
+    item-drop: true
+    item-insert: true
+    item-pickup: true
+    item-remove: true
+    item-rotate: true
+    lava-break: true
+    lava-bucket: true
+    lava-flow: false
+    lava-ignite: true
+    leaf-decay: true
+    lighter: true
+    lightning: true
+    mushroom-grow: true
+    player-chat: false
+    player-command: false
+    player-death: true
+    player-join: false
+    player-kill: true
+    player-quit: false
+    player-teleport: false
+    potion-splash: true
+    sheep-eat: true
+    sign-change: true
+    spawnegg-use: true
+    tnt-explode: true
+    tnt-prime: true
+    tree-grow: true
+    vehicle-break: true
+    vehicle-enter: true
+    vehicle-exit: true
+    vehicle-place: true
+    water-break: true
+    water-bucket: true
+    water-flow: false
+    world-edit: false
+    xp-pickup: false
+    api:
+      enabled: true
+      allowed-plugins:
+      - DarkMythos
+      - PrismApiDemo
+  track-player-ip-on-join: false
+  track-hopper-item-events: false
+  do-not-track:
+    commands:
+    - vanish
+    - v
+    - login
+    - changepassword
+    - register
+    - unregister
+  alerts:
+    alert-staff-to-applied-process: true
+    alert-player-about-self: true
+    ores:
+      enabled: true
+      log-to-console: true
+      log-commands:
+      - examplecommand <alert>
+      blocks:
+        '56': '&b'
+        '14': '&6'
+        '15': '&7'
+        '129': '&a'
+        '21': '&9'
+    illegal-commands:
+      enabled: false
+      log-to-console: true
+      log-commands:
+      - examplecommand <alert>
+      commands:
+      - op
+      - deop
+      - stop
+      - reload
+      - bukkit:op
+      - bukkit:deop
+      - bukkit:stop
+      - bukkit:reload
+      - minecraft:op
+      - minecraft:deop
+      - minecraft:stop
+      - minecraft:reload
+    uses:
+      enabled: true
+      log-to-console: true
+      log-commands:
+      - examplecommand <alert>
+      lighter: true
+      lava: true
+      item-placement:
+      - '7'
+      - '29'
+      - '46'
+      - '10'
+      - '11'
+      item-break: []
+    vanilla-xray:
+      enabled: true
+  queue-empty-tick-delay: 3
