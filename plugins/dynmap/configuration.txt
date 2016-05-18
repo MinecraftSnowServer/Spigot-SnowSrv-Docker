@@ -139,11 +139,11 @@ components:
     showplayerfaces: true
     messagettl: 5
     # Optional: set number of lines in scrollable message history: if set, messagettl is not used to age out messages
-    #scrollback: 100
+    scrollback: 100
     # Optiona; set maximum number of lines visible for chatbox
     #visiblelines: 10
     # Optional: send push button
-    sendbutton: false
+    sendbutton: true
   - class: org.dynmap.ClientComponent
     type: playermarkers
     showplayerfaces: true
@@ -316,7 +316,7 @@ exportpath: export
 
 # The network-interface the webserver will bind to (0.0.0.0 for all interfaces, 127.0.0.1 for only local access).
 # If not set, uses same setting as server in server.properties (or 0.0.0.0 if not specified)
-#webserver-bindaddress: 0.0.0.0
+webserver-bindaddress: 0.0.0.0
 
 # The TCP-port the webserver will listen on.
 webserver-port: 8123
