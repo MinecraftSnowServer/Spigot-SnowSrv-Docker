@@ -46,8 +46,9 @@ server:
   links:
     - authdb:authdb
   ports:
-    - "25565:25565"
-    - "8123:8123"
+    - "25565:25565" # Server
+    - "25560:25560" # Slack
+    - "8123:8123"   # Dynmap
   volumes:
     - ./data/server:/data
     - ./plugins:/data/plugins
