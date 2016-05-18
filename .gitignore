@@ -1,5 +1,6 @@
 data
 plugins/AuthMe/*.log
+plugins/AuthMe/*.log.lck
 plugins/AuthMe/*.db
 plugins/AuthMe/GeoIP.dat
 plugins/AdminCmd/*.log
@@ -17,5 +18,9 @@ plugins/Multiverse-Portals/*.log.*
 plugins/Multiverse-Portals/*.lck
 plugins/Multiverse-Portals/portals.yml
 plugins/TreeLogging/*.sqlite3
+plugins/Train_Carts/*.dat
+plugins/Train_Carts/*.groupdata
+plugins/Train_Carts/arrivaltimes.txt
+plugins/Train_Carts/TrainProperties.yml
 
 server
