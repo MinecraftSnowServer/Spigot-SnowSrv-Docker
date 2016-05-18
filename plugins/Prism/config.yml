@@ -10,10 +10,10 @@ prism:
     actions-per-insert-batch: 1000
     force-write-queue-on-shutdown: true
   mysql:
-    hostname: 127.0.0.1
-    username: root
-    password: ''
-    database: minecraft
+    hostname: prismdb
+    username: prismdb
+    password: prismdb
+    database: prismdb
     prefix: prism_
     port: '3306'
   paste:

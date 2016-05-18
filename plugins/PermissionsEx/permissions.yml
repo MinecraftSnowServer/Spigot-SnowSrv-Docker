@@ -57,6 +57,9 @@ groups:
     - multiverse.signportal.create
     - multiverse.signportal.validate
     - multiverse.teleport.self.*
+    - prism.help
+    - prism.lookup
+    - prism.setmy.wand
     - train.build.announcer
     - train.build.blocker
     - train.build.collector
@@ -146,6 +149,10 @@ groups:
     - headdrops.mobhead
     - headdrops.other
     - headdrops.playerhead
+    - prism.extinguish
+    - prism.drain
+    - prism.tp
+    - prism.ignore.tracking.*
     - worldedit.analysis.*
     - worldedit.brush.*
     - worldedit.butcher
@@ -192,6 +199,7 @@ groups:
     - lockette.*
     - multiverse.*
     - permissions.*
+    - prism.*
     - train.*
     - worldedit.*
     - worldguard.*
