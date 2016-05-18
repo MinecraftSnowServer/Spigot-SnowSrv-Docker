@@ -1,6 +1,6 @@
 authdb:
   extends:
-    file: pwd/docker-services.yml
+    file: web/pwd/docker-services.yml
     service: authdb
   volumes:
     - ./data/authdb:/bitnami/mariadb/data
@@ -16,7 +16,7 @@ prismdb:
 
 pwd:
   extends:
-    file: pwd/docker-services.yml
+    file: web/pwd/docker-services.yml
     service: pwd
   links:
     - authdb:authdb
