@@ -23,6 +23,7 @@ web:
     - ./web/:/var/www/html
   links:
     - authdb:authdb
+    - prismdb:prismdb
   environment:
     - WEBSITE_TITLE=帳號管理網站 - Snowman's Minecraft PWD Utility
 
