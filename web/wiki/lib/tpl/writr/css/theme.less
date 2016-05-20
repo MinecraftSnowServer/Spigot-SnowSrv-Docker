@@ -1,0 +1,367 @@
+/* =Theme
+----------------------------------------------- */
+
+/* Body */
+body {
+    overflow-x: hidden;
+    padding: 40px 0 0;
+    width: 100%;
+    background: @ini_text_alt;
+    color: @ini_text;
+    -ms-word-wrap: break-word;
+    word-wrap:     break-word;
+}
+body:after,
+body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 200%;
+}
+body:after {
+    left: 0;
+    width: 300px;
+    background: @ini_theme_color;
+}
+body:before {
+    left: 300px;
+    width: 100px;
+    background: @ini_text_alt;
+}
+
+/* Page */
+#writr__page {
+    z-index: 1;
+    margin: 0;
+    width: (@ini_content_width + 400px);
+}
+#writr__page:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 400px;
+    width: @ini_content_width;
+    height: 100%;
+    background: @ini_background;
+}
+
+/* Sidebar */
+.sidebar-area {
+    position: relative;
+    float: left;
+    width: 300px;
+    padding: 0 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+#writr__sidebar-toggle {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: -40px;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: @ini_theme_color_alt;
+    color: @ini_background;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+#writr__sidebar-toggle:before,
+#writr__sidebar-toggle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-top: 40px solid @ini_theme_color_alt;
+    border-right: 40px solid transparent;
+}
+#writr__sidebar-toggle:before {
+    top: 40px;
+}
+#writr__sidebar-toggle:after {
+    top: 0;
+    left: 40px;
+}
+#writr__sidebar-toggle .genericon {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform:    rotate(45deg);
+    -ms-transform:     rotate(45deg);
+    -o-transform:      rotate(45deg);
+    transform:         rotate(45deg);
+}
+#writr__sidebar-toggle.open .genericon {
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
+}
+
+/* Header */
+.site-header {
+    background: @ini_theme_color;
+    color: @ini_background;
+}
+.site-logo {
+    display: block;
+    margin: 0 0 20px;
+    text-align: center;
+}
+.site-logo img {
+    display: block;
+}
+.site-branding {
+    position: relative;
+    padding: 0;
+    margin: 0 0 20px;
+    border-bottom: 15px double @ini_theme_color_alt;
+    text-align: center;
+}
+.site-title {
+    padding: 0 0 5px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.site-title a {
+    display: inline-block;
+    color: @ini_background;
+    text-decoration: none;
+}
+.site-title a:hover {
+    color: @ini_theme_color_alt;
+}
+.site-description {
+    margin: 0 0 20px;
+    color: @ini_background;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Primary */
+.content-area {
+    float: right;
+    width: @ini_content_width;
+    height: auto;
+    padding: 0 40px;
+    background: @ini_background;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+/* Sidebar */
+.widget-area,
+.widget-area a,
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5,
+.widget-area h6 {
+    color: @ini_background;
+}
+.widget-area a:hover,
+.widget-area a:focus,
+.widget-area a:active {
+    color: @ini_background_neu;
+}
+.widget-area {
+    width: 220px;
+}
+
+/* Footer */
+.site-footer {
+}
+.site-info {
+    padding: 0 0 40px;
+    color: @ini_background;
+    font-size: 12px;
+    text-align: center;
+}
+.site-info a {
+    color: @ini_background;
+    text-decoration: none;
+}
+.site-info a:hover {
+    color: @ini_theme_color_alt;
+}
+.page-footer {
+    font-size: 14px;
+    padding: 20px 40px;
+    margin: 40px -40px 0;
+    width: 100%;
+    background-color: @ini_background_alt;
+}
+
+/* =DokuWiki-specific
+----------------------------------------------- */
+
+/* Breadcrumbs */
+div.breadcrumbs {
+    background-color: @ini_background_alt;
+    margin: 0 0 20px -40px;
+    padding: 15px 40px;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+
+    a {
+        text-decoration: none;
+    }
+}
+body:not(.mode_show) div.breadcrumbs {
+    display: none;
+}
+
+/* TOC */
+#dw__toc {
+    h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+        padding: 10px;
+    }
+    > div {
+        padding: 0 10px 10px;
+    }
+    li {
+        font-size: 14px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+/* Section editing */
+.secedit input.button, /* @deprecated since Detritus */
+.secedit button {
+    padding: 5px 10px;
+}
+.dokuwiki div.section_highlight {
+    margin: 0 -40px;
+    padding: 0 20px;
+    border-width: 0 20px;
+}
+
+/* Modal windows */
+.dokuwiki form.search div.ajax_qsearch {
+    left: auto;
+    right: -13.5em;
+    top: -10px;
+}
+.JSpopup {
+    border: 2px solid @ini_background_neu;
+    border-radius: 20px;
+    color: @ini_text;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.mock-layout {
+    background-color: @ini_background;
+    padding: 0;
+    width: auto;
+
+    &::after {
+        width: 40px;
+    }
+    &::before {
+        width: 20px;
+        left: 40px;
+    }
+
+    > div {
+        padding: 20px 20px 20px 80px !important;
+    }
+}
+
+/* Fullscreen media manager */
+.mode_media {
+    .mock-layout;
+
+    #writr__sidebar-toggle,
+    #writr__masthead .site-branding,
+    #writr__masthead .search-form,
+    #writr__site-navigation,
+    #writr__secondary,
+    .breadcrumbs,
+    .page-footer {
+        display: none;
+    }
+    #writr__page,
+    .content-area {
+        width: auto;
+    }
+    .content-area {
+        padding: 0;
+    }
+
+    /* show only logo in sidebar */
+    #writr__sidebar {
+        float: none;
+        padding: 0;
+        width: auto;
+        position: static;
+        .site-header {
+            background-color: transparent;
+            position: absolute;
+            top: 15px;
+            left: 5px;
+        }
+        .site-logo {
+            display: inline-block;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+/* Popup media manager */
+.media-popup {
+    padding: 0;
+
+    &,
+    &::before,
+    &::after {
+        background-color: @ini_background;
+    }
+
+    #mediamgr__aside > div,
+    #mediamgr__content > div {
+        padding: 5px;
+    }
+
+    #media__tree {
+        li > ul {
+            margin-left: 0;
+        }
+        ul li li {
+            margin-left: 1em;
+        }
+    }
+}
+
+/* Image detail page */
+.detail-page {
+    .mock-layout;
+
+    p.back a .genericon {
+        vertical-align: middle;
+        text-decoration: none;
+        margin: 0 5px 0 -8px;
+    }
+}

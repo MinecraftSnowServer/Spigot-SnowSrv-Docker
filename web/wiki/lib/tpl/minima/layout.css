@@ -1,0 +1,328 @@
+/**
+ * Tableless Layout for minima template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ * @author Esther Brunner <wikidesign@gmail.com>
+ */
+ 
+/* -------------- general --------------- */
+
+div.dokuwiki {
+  margin-top: 13px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#minima__wide_left, #minima__wide_right { width: 987px; }
+#minima__medium_left, #minima__medium_right { width: 754px; }
+#minima__narrow_left, #minima__narrow_right { width: 610px; }
+
+/* -------------- header --------------- */
+
+div.dokuwiki .header { height: 55px; }
+
+#minima__wide_left .header,
+#minima__wide_right .header {
+  background: transparent url(images/header_wide__theme__.jpg) no-repeat;
+}
+
+#minima__medium_left .header,
+#minima__medium_right .header {
+  background: transparent url(images/header_medium__theme__.jpg) no-repeat;
+}
+
+#minima__narrow_left .header,
+#minima__narrow_right .header {
+  background: transparent url(images/header_narrow__theme__.jpg) no-repeat;
+}
+
+#minima__wide_left .header { padding: 21px 89px 13px 288px; }
+#minima__medium_left .header { padding: 21px 68px 13px 220px; }
+#minima__narrow_left .header { padding: 21px 55px 13px 178px; }
+#minima__wide_right .header { padding: 21px 55px 13px 89px; }
+#minima__medium_right .header { padding: 21px 42px 13px 68px; }
+#minima__narrow_right .header { padding: 21px 34px 13px 55px; }
+
+div.dokuwiki .logo {
+  font-size: 220%;
+  font-weight: bolder;
+  margin-top: 8px;
+  /* vertical-align: middle; */
+}
+
+div.dokuwiki .logo a {
+  color: __background__ !important;
+  text-decoration: none !important;
+}
+
+/* ---------------  main ---------------- */
+
+div.dokuwiki div.main {
+  overflow: auto;
+  background-color: __background__;
+  border-left: 1px solid __text_alt__;
+  border-right: 1px solid __text_alt__;
+}
+
+/* ---------------  page ---------------- */
+
+div.dokuwiki div.page {
+  text-align: justify;
+  line-height: 1.5em;
+  padding-top: 21px;
+  padding-bottom: 34px;
+  background-color: __background__;
+}
+
+div.dokuwiki div.tabs {
+  font-size: 12px;
+  padding-top: 5px;
+  line-height: 1.5em;
+  background-color: __background_alt__;
+  border-bottom: 1px solid __border__;
+}
+
+div.dokuwiki span.activetab {
+  background-color: __background__;
+  padding: 2px 5px;
+  border: 1px solid __border__;
+  border-bottom: 1px solid __background__;
+}
+
+div.dokuwiki a.tab {
+  background-color: __background_neu__;
+  padding: 2px 5px;
+  border: 1px solid __text_other__;
+  border-bottom: 0px;
+}
+
+div.dokuwiki a.tab:hover {
+  text-decoration: none;
+  background-color: __background_other__;
+  border: 1px solid __border__;
+  border-bottom: 0px;
+}
+
+#minima__wide_left div.tabs,
+#minima__wide_left div.breadcrumbs,
+#minima__wide_right div.tabs,
+#minima__wide_right div.breadcrumbs {
+  width: 842px;
+}
+
+#minima__wide_left div.page,
+#minima__wide_right div.page {
+  width: 610px;
+}
+
+#minima__wide_left div.page,
+#minima__wide_left div.tabs,
+#minima__wide_left div.breadcrumbs {
+  padding-left: 55px;
+  padding-right: 88px;
+  float: right;
+}
+
+#minima__wide_right div.page,
+#minima__wide_right div.tabs,
+#minima__wide_right div.breadcrumbs {
+  padding-left: 88px;
+  padding-right: 55px;
+  float: left;
+}
+
+#minima__medium_left div.tabs,
+#minima__medium_left div.breadcrumbs,
+#minima__medium_right div.tabs,
+#minima__medium_right div.breadcrumbs {
+  width: 643px;
+}
+
+#minima__medium_left div.page,
+#minima__medium_right div.page {
+  width: 466px;
+}
+
+#minima__medium_left div.page,
+#minima__medium_left div.tabs,
+#minima__medium_left div.breadcrumbs {
+  padding-left: 42px;
+  padding-right: 67px;
+  float: right;
+}
+
+#minima__medium_right div.page,
+#minima__medium_right div.tabs,
+#minima__medium_right div.breadcrumbs {
+  padding-left: 67px;
+  padding-right: 42px;
+  float: left;
+}
+
+#minima__narrow_left div.tabs,
+#minima__narrow_left div.breadcrumbs,
+#minima__narrow_right div.tabs,
+#minima__narrow_right div.breadcrumbs {
+  width: 520px;
+}
+
+#minima__narrow_left div.page,
+#minima__narrow_right div.page {
+  width: 377px;
+}
+
+#minima__narrow_left div.page,
+#minima__narrow_left div.tabs,
+#minima__narrow_left div.breadcrumbs {
+  padding-left: 34px;
+  padding-right: 54px;
+  float: right;
+}
+
+#minima__narrow_right div.page,
+#minima__narrow_right div.tabs,
+#minima__narrow_right div.breadcrumbs {
+  padding-left: 54px;
+  padding-right: 34px;
+  float: left;
+}
+
+/* ---------------  sidebar ---------------- */
+
+div.dokuwiki div.sidebar {
+  background: __background_alt__;
+	font-size: 90%;
+}
+
+div.dokuwiki div.sidebar:after {
+  content: "&nbsp;";
+  display: block;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#minima__wide_left div.sidebar { padding: 21px 34px 34px 54px; width: 144px; }
+#minima__medium_left div.sidebar { padding: 21px 26px 34px 41px; width: 110px; }
+#minima__narrow_left div.sidebar { padding: 21px 21px 34px 33px; width: 89px; }
+
+#minima__wide_right div.sidebar {
+  margin-left: 753px;
+  padding: 21px 54px 34px 34px;
+}
+
+#minima__medium_right div.sidebar {
+  margin-left: 575px;
+  padding: 21px 41px 34px 26px;
+}
+
+#minima__narrow_right div.sidebar {
+  margin-left: 465px;
+  padding: 21px 33px 34px 21px;
+}
+
+#minima__wide_left div.sidebar:after,
+#minima__medium_left div.sidebar:after,
+#minima__narrow_left div.sidebar:after {
+  clear: right;
+}
+
+#minima__wide_right div.sidebar:after,
+#minima__medium_right div.sidebar:after,
+#minima__narrow_right div.sidebar:after {
+  clear: left;
+}
+
+div.dokuwiki div.search {
+  width: 100%;
+}
+
+/* ---------------  button bar ---------------- */
+
+div.dokuwiki div.bar {
+  border-top: 1px solid __border__;
+  border-bottom: 1px solid __border__;
+  background: __background_alt__;
+  clear: both;
+}
+
+#minima__wide_left div.bar,
+#minima__medium_left div.bar,
+#minima__narrow_left div.bar {
+  border-right: 1px solid __border__;
+  padding: 2px 2px 2px 0;
+}
+
+#minima__wide_right div.bar,
+#minima__medium_right div.bar,
+#minima__narrow_right div.bar {
+  border-left: 1px solid __border__;
+  padding: 2px 0 2px 2px;
+}
+
+#minima__wide_left div.bar { margin-left: -55px; padding-left: 55px; width: 607px; }
+#minima__medium_left div.bar { margin-left: -42px; padding-left: 42px; width: 463px; }
+#minima__narrow_left div.bar { margin-left: -34px; padding-left: 34px; width: 374px; }
+
+#minima__wide_right div.bar { width: 662px; }
+#minima__medium_right div.bar { width: 505px; }
+#minima__narrow_right div.bar { width: 408px; }
+
+/* ------------- file metadata ----------------------- */
+
+div.dokuwiki div.meta {
+  margin-top: 2em;
+  color: __text_alt__;
+  font-size: 80%;
+}
+
+/* ------------- footer ----------------------- */
+
+div.dokuwiki div.footer {
+  height: 10px;
+	font-size: 5px;
+	line-height: 9px;
+}
+
+div.dokuwiki div.edgeleft {
+	float: left;
+	padding-left: 10px;
+  background: __background__ url(images/edgeleft__theme__.gif) no-repeat bottom left;
+}
+
+div.dokuwiki div.edgeright {
+	float: right;
+	padding-right: 10px;
+  background: __background__ url(images/edgeright__theme__.gif) no-repeat bottom right;
+}
+
+#minima__wide_left div.edgeleft,
+#minima__wide_right div.edgeright {
+  width: 223px;
+  background-color: __background_alt__;
+}
+
+#minima__medium_left div.edgeleft,
+#minima__medium_right div.edgeright {
+  width: 168px;
+  background-color: __background_alt__;
+}
+
+#minima__narrow_left div.edgeleft,
+#minima__narrow_right div.edgeright {
+  width: 134px;
+  background-color: __background_alt__;
+}
+
+#minima__wide_left div.edgeright, #minima__wide_right div.edgeleft { width: 744px; }
+#minima__medium_left div.edgeright, #minima__medium_right div.edgeleft { width: 566px; }
+#minima__narrow_left div.edgeright, #minima__narrow_right div.edgeleft { width: 456px; }
+
+div.dokuwiki div.borderbottom {
+  width: 100%;
+  border-bottom: 1px solid __text_alt__;
+}
