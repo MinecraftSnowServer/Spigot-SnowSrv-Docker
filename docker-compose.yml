@@ -14,12 +14,17 @@ prismdb:
     - MARIADB_DATABASE=prismdb
     - MARIADB_PASSWORD=prismdb
 
-pwd:
-  extends:
-    file: web/pwd/docker-services.yml
-    service: pwd
+web:
+  build: ./web
+  command: ./wait-for-it.sh -s -t 120 authdb:3306 -- ./setup.sh
+  ports:
+    - "8000:80"
+  volumes:
+    - ./web/:/var/www/html
   links:
     - authdb:authdb
+  environment:
+    - WEBSITE_TITLE=帳號管理網站 - Snowman's Minecraft PWD Utility
 
 server:
   extends:
