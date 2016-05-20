@@ -2,4 +2,4 @@
 /**
  * Forwarder to PWD
  */
-header("Location: pwd/");
+header("Location: wiki/");
