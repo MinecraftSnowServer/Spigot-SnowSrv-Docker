@@ -6,7 +6,7 @@
  * Date: Wed, 16 Dec 2015 17:10:51 +0800
  */
 
-$conf['title'] = getenv('DOKU_TITLE');
+$conf['title'] = 'My MCServer Wiki';
 $conf['lang'] = 'zh-tw';
 $conf['template'] = 'bootstrap3';
 $conf['sidebar'] = 'wiki:navigation';
@@ -18,20 +18,20 @@ $conf['im_convert'] = '/usr/bin/convert';
 $conf['jpg_quality'] = 90;
 $conf['refcheck'] = 0;
 $conf['subscribers'] = 1;
-$conf['registernotify'] = getenv('DOKU_MAIL_NOIFY');
-$conf['mailfrom'] = getenv('DOKU_MAIL_FROM');
-$conf['mailprefix'] = getenv('DOKU_MAIL_PRIFIX');
+$conf['registernotify'] = 'op@mine.foo.bar';
+$conf['mailfrom'] = 'wiki@mine.foo.bar';
+$conf['mailprefix'] = 'MCServer';
 $conf['sitemap'] = 1;
 $conf['userewrite'] = '2';
 $conf['fnencode'] = 'utf-8';
 $conf['send404'] = 1;
-$conf['proxy']['user'] = getenv('DOKU_PROXY_USERNAME');
-$conf['proxy']['pass'] = getenv('DOKU_PROXY_PASSWORD');
+$conf['proxy']['user'] = '';
+$conf['proxy']['pass'] = '';
 $conf['plugin']['iframe']['js_ok'] = 1;
 $conf['plugin']['authmysql']['TablesToLock'] = array();
 $conf['tpl']['bootstrap3']['bootstrapTheme'] = 'bootswatch';
 $conf['tpl']['bootstrap3']['bootswatchTheme'] = 'yeti';
-$conf['tpl']['bootstrap3']['customTheme'] = getenv('DOKU_BASE_URL') . '/bootstrap-css/bootstrap.min.css';
+$conf['tpl']['bootstrap3']['customTheme'] = './wiki/bootstrap-css/bootstrap.min.css';
 $conf['tpl']['bootstrap3']['showUserHomeLink'] = 0;
 $conf['tpl']['bootstrap3']['pageOnPanel'] = 0;
 $conf['tpl']['bootstrap3']['tableFullWidth'] = 0;
