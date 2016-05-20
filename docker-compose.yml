@@ -25,7 +25,20 @@ web:
     - authdb:authdb
     - prismdb:prismdb
   environment:
-    - WEBSITE_TITLE=帳號管理網站 - Snowman's Minecraft PWD Utility
+    - WEBSITE_TITLE=帳號管理網站 - Minecraft PWD Utility
+    - DOKU_TITLE=麥塊維基
+    - DOKU_MAIL_NOIFY=op@mine.foo.bar
+    - DOKU_MAIL_FROM=wiki@mine.foo.bar
+    - DOKU_MAIL_PRIFIX=某某麥塊伺服器
+    - DOKU_SUPERUSER_ID=op_username
+    - DOKU_AUTH_DB_HOSTNAME=authdb
+    - DOKU_AUTH_DB_USERNAME=authdb
+    - DOKU_AUTH_DB_PASSWORD=authdb
+    - DOKU_AUTH_DB_DATABASE=authdb
+    - DOKU_BASE_URL=https://mine.foo.bar/wiki
+    # - DOKU_PROXY_USERNAME=
+    # - DOKU_PROXY_PASSWORD=
+
 
 server:
   extends:
