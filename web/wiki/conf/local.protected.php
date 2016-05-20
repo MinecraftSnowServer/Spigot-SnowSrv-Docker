@@ -8,10 +8,10 @@ $conf['defaultgroup']       = 'user';
 $conf['authtype']           = 'authminecraft';
 $conf['auth']['minecraft']  = [
     'debug'         => 1,
-    'server'        => getenv('DOKU_AUTH_DB_HOSTNAME'),
-    'user'          => getenv('DOKU_AUTH_DB_USERNAME'),
-    'password'      => getenv('DOKU_AUTH_DB_PASSWORD'),
-    'database'      => getenv('DOKU_AUTH_DB_DATABASE'),
+    'server'        => getenv('AUTHDB_PORT_3306_TCP_ADDR'),
+    'user'          => getenv('AUTHDB_ENV_MARIADB_DATABASE'),
+    'password'      => getenv('AUTHDB_ENV_MARIADB_USER'),
+    'database'      => getenv('AUTHDB_ENV_MARIADB_PASSWORD'),
 
     # User Index
     'getUsers'      => "SELECT DISTINCT username AS user

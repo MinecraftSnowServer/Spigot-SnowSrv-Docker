@@ -30,11 +30,7 @@ web:
     - DOKU_MAIL_NOIFY=op@mine.foo.bar
     - DOKU_MAIL_FROM=wiki@mine.foo.bar
     - DOKU_MAIL_PRIFIX=某某麥塊伺服器
-    - DOKU_SUPERUSER_ID=op_username
-    - DOKU_AUTH_DB_HOSTNAME=authdb
-    - DOKU_AUTH_DB_USERNAME=authdb
-    - DOKU_AUTH_DB_PASSWORD=authdb
-    - DOKU_AUTH_DB_DATABASE=authdb
+    - DOKU_SUPERUSER_ID=fntsrswl
     - DOKU_BASE_URL=https://mine.foo.bar/wiki
     # - DOKU_PROXY_USERNAME=
     # - DOKU_PROXY_PASSWORD=
