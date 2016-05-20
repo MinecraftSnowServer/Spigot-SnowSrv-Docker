@@ -91,7 +91,7 @@ class action_plugin_pageredirect extends DokuWiki_Action_Plugin {
 
 		// redirect
 		header("HTTP/1.1 301 Moved Permanently");
-		header("Location: ".$page.$section);
+		header("Location: ".$page.$section.$_SERVER['QUERY_STRING']);
 		exit();
 	}
 
@@ -110,7 +110,7 @@ class action_plugin_pageredirect extends DokuWiki_Action_Plugin {
 			if (isset($_SESSION[DOKU_COOKIE]['redirect']) && $_SESSION[DOKU_COOKIE]['redirect'] != '') {
 				// we were redirected from another page, show it!
 				$page  = cleanID($_SESSION[DOKU_COOKIE]['redirect']);
-				$title = hsc(useHeading('navigation') ? p_get_first_heading($page) : $page);
+				$title = hsc(useHeading('navigation') && p_get_first_heading($page) ? p_get_first_heading($page) : $page);
 				echo '<div class="noteredirect">'.sprintf($this->getLang('redirected_from'), '<a href="'.wl(':'.$page, array('redirect' => 'no'), TRUE, '&').'" class="wikilink1" title="'.$page.'">'.$title.'</a>').'</div><br/>';
 				unset($_SESSION[DOKU_COOKIE]['redirect']);
 

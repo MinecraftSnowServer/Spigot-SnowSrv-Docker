@@ -15,7 +15,7 @@ require_once (DOKU_PLUGIN . '/acl/admin.php');
 
 class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
 
-    function register(&$controller) {
+    function register(Doku_Event_Handler $controller) {
         $controller->register_hook('DOKUWIKI_STARTED', 'AFTER', $this, 'init',array());
         $controller->register_hook('DETAIL_STARTED', 'AFTER', $this, 'init',array());
         $controller->register_hook('ACTION_ACT_PREPROCESS', 'BEFORE', $this, 'redirect',array());
@@ -35,9 +35,10 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
             } else {
                 $dest = $this->getConf('templates_path');
             }
+            //if ($event == "DETAIL_STARTED") { return false; }
             $this->dataDir = $conf['savedir'];
-            // CREATE PRIVATE NAMESPACE START PAGE TEMPLATES IF NEEDED (is required by options, doesn't exist yet and a known user is logged in)
-            if (($this->getConf('create_private_ns')) && (!is_file($this->dataDir.'/'.$this->getConf('templates_path').'/userhomepage_private.txt')) && ($this->userOk())) {
+            // CREATE PRIVATE NAMESPACE START PAGE TEMPLATES IF NEEDED (is required by options, doesn't exist yet and a known user is logged in and not showing image details page)
+            if (($this->getConf('create_private_ns')) && (!is_file($this->dataDir.'/'.$this->getConf('templates_path').'/userhomepage_private.txt')) && ($this->userOk()) && ($event != "DETAIL_STARTED")) {
                 // If a template exists in path as builded before 2015/05/14 version, use it as source to create userhomepage_private.txt in new templates_path
                 if ((is_file(DOKU_CONF.'../'.$this->getConf('templates_path').'/userhomepage_private.txt')) && ($this->getConf('templatepath') != null)) {
                     $source = DOKU_CONF.'../'.$this->getConf('templates_path').'/userhomepage_private.txt';
@@ -50,8 +51,8 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
                 }
                 $this->copyFile($source, $dest, 'userhomepage_private.txt');
             }
-            // CREATE PUBLIC PAGE TEMPLATES IF NEEDED (is required by options, doesn't exist yet and a known user is logged in)
-            if (($this->getConf('create_public_page')) and (!is_file($this->dataDir.'/'.$this->getConf('templates_path').'/userhomepage_public.txt')) and ($this->userOk())) {
+            // CREATE PUBLIC PAGE TEMPLATES IF NEEDED (is required by options, doesn't exist yet and a known user is logged in and not showing image details page)
+            if (($this->getConf('create_public_page')) and (!is_file($this->dataDir.'/'.$this->getConf('templates_path').'/userhomepage_public.txt')) and ($this->userOk()) && ($event != "DETAIL_STARTED")) {
                 // If a template exists in path as builded before 2015/05/14 version, use it as source to create userhomepage_private.txt in new templates_path
                 if ((is_file(DOKU_CONF.'../'.$this->getConf('templates_path').'/userhomepage_public.txt')) && ($this->getConf('templatepath') != null)) {
                     $source = DOKU_CONF.'../'.$this->getConf('templates_path').'/userhomepage_public.txt';
@@ -80,6 +81,7 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
     function redirect(&$event, $param) {
         global $conf;
         global $lang;
+        global $ID;
 
         if ($this->multiNsOk()) {
             $created = array();
@@ -148,15 +150,18 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
                         array_push($wikistart, $language.':'.$conf['start'], ':'.$language.':'.$conf['start']);
                     }
                 }
-                // If Public page was just created, redirect to it and edit (or show)
-                if (($created['public']) && (page_exists($this->public_page))) {
-                    send_redirect(wl($this->public_page, array('do='.$this->getConf('action')), true));
-                // Else if private start page was just created and edit option is set, redirect to it and edit
-                } elseif (($created['private']) && (page_exists($this->private_page)) && ($this->getConf('edit_before_create'))) {
-                    send_redirect(wl($this->private_page, array('do='.$this->getConf('action')), true));
-                // Else if redirection is enabled and user's private page exists AND [(user isn't requesting a specific page OR he's requesting wiki start page) AND logged in 2sec ago max]
-                } elseif (($this->getConf('redirection')) && (page_exists($this->private_page)) && (((!isset($_GET['id'])) or (in_array($_GET['id'], $wikistart))) && (time()-$_SESSION["uhptimestamp"] <= 2))) {
-                    send_redirect(wl($this->private_page, '', true));
+                // If user isn't on public or private page yet, check for redirection conditions
+                if (($ID != $this->public_page) && ($ID != $this->private_page)) {
+                    // If Public page was just created, redirect to it and edit (or show)
+                    if (($created['public']) && (page_exists($this->public_page))) {
+                        send_redirect(wl($this->public_page, array('do='.$this->getConf('action')), true));
+                    // Else if private start page was just created and edit option is set, redirect to it and edit
+                    } elseif (($created['private']) && (page_exists($this->private_page)) && ($this->getConf('edit_before_create'))) {
+                        send_redirect(wl($this->private_page, array('do='.$this->getConf('action')), true));
+                    // Else if redirection is enabled and user's private page exists AND [(user isn't requesting a specific page OR he's requesting wiki start page) AND logged in 2sec ago max]
+                    } elseif (($this->getConf('redirection')) && (page_exists($this->private_page)) && (((!isset($_GET['id'])) or (in_array($_GET['id'], $wikistart))) && (time()-$_SESSION["uhptimestamp"] <= 2))) {
+                        send_redirect(wl($this->private_page, '', true));
+                    }
                 }
             }
         } else {
@@ -169,7 +174,8 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
 
         if ($this->multiNsOk()) {
             if ((!$this->getConf('no_acl')) && ($conf['useacl']) && ($this->userOk())) {
-                $existingLines = file(DOKU_CONF.'acl.auth.php');
+                global $config_cascade;
+                $existingLines = file($config_cascade['acl']['default']);
                 $newLines = array();
                 // ACL
                 $acl = new admin_plugin_acl();
@@ -366,9 +372,9 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
             if (($conf['showuseras'] == "username_link") and ($this->getConf('userlink_replace'))) {
                 $classes = $this->getConf('userlink_classes');
                 $classes = str_replace(',', ' ', $classes);
-                if ($this->getConf('userlink_fa')) {
-                    $classes = str_replace('interwiki', '', $classes);
-                }
+                //if ($this->getConf('userlink_fa')) {
+                //    $classes = str_replace('interwiki', '', $classes);
+                //}
                 $this->username = $event->data['username'];
                 $this->name = $event->data['name'];
                 $this->link = $event->data['link'];
@@ -450,7 +456,7 @@ class action_plugin_userhomepage extends DokuWiki_Action_Plugin{
                 $groups = str_replace(' ','', $groups);
                 $groups = explode(',', $groups);
                 $userGroups = $INFO['userinfo']['grps'];
-                // If UHP is set to check user's group(s) 
+                // If UHP is set to check user's group(s)
                 if (($groups != null) and ($groups[0] != null) and ($userGroups != null)) {
                     $test = array_intersect($groups, $userGroups);
                     // Proceed if user is member of at least one group set UHP's corresponding setting
