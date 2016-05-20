@@ -25,6 +25,9 @@ server:
   extends:
     file: docker-service.yml
     service: server
+  volumes:
+    - ./web/wait-for-it.sh:/wait:ro
+  command: /wait -s -t 120 authdb:3306 -- /start
   links:
     - authdb:authdb
     - prismdb:prismdb
