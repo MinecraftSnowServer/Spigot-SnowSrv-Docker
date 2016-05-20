@@ -3,12 +3,12 @@ authdb:
     file: web/pwd/docker-services.yml
     service: authdb
   volumes:
-    - ./data/authdb:/bitnami/mariadb/data
+    - ./data/authdb:/bitnami/mariadb
 
 prismdb:
   image: bitnami/mariadb:10.1.13-r0
   volumes:
-    - ./data/prismdb:/bitnami/mariadb/data
+    - ./data/prismdb:/bitnami/mariadb
   environment:
     - MARIADB_USER=prismdb
     - MARIADB_DATABASE=prismdb
